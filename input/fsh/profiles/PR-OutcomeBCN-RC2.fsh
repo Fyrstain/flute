@@ -3,7 +3,7 @@ Parent: Observation
 Id: PR-OutcomeBCN-RC2
 Title: "Observation: Outcome BCN-RC 2"
 Description: "This profile represents the outcome for BCN-RC 2 ISUP-GG."
-* code = $sct#385377005 "Gleason grade finding for prostatic cancer"
+* code = $loinc#LL5543-5 "ISUP grade"
 * subject 1.. 
 * subject only Reference(Patient)
 * valueCodeableConcept 1..1
