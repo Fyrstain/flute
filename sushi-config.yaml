@@ -162,8 +162,8 @@ groups:
       - ConceptMap/CM-Requirements2StudyVariables
      
   StudyVariablesGroup:
-    name:  HL7 FHIR Profile implementing the Patient model for Prostate Cancer Study
-    description: HL7 FHIR Profile implementing the Patient model with specific prostate cancer considerations
+    name:  Prostate Cancer Study variables
+    description: HL7 FHIR Profiles representing Prostate Cancer Study variables
     resources:
       - StructureDefinition/PR-DigitalRectalExamination
       - StructureDefinition/PR-PIRADSScore
@@ -171,10 +171,10 @@ groups:
       - StructureDefinition/PR-ProstateVolume
       - StructureDefinition/PR-Biopsy
       - StructureDefinition/PR-ProstateCancerFamilyHistory
-          
+
   OutcomeVariablesGroup:
-    name: "Group for Outcome Variable related to Prostate Cancer Prediction"
-    description: "Group containing HL7 FHIR Profiles implementing outcome variable for Prostate Cancer prediction"
+    name: Outcome Variable related to Prostate Cancer study
+    description: HL7 FHIR Profiles implementing outcome variable for Prostate Cancer study
     resources:
       - StructureDefinition/PR-OutcomeBCN-RC2
 
