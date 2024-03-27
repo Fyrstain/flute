@@ -169,7 +169,7 @@ groups:
       - StructureDefinition/PR-PIRADSScore
       - StructureDefinition/PR-ProstateSpecificAntigen
       - StructureDefinition/PR-ProstateVolume
-      - StructureDefinition/PR-TypeOfBiopsy
+      - StructureDefinition/PR-Biopsy
       
   FamilyHistoryImplementation:
     name:  HL7 FHIR Profile implementing the Family History model for Prostate Cancer

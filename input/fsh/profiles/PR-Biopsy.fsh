@@ -1,6 +1,6 @@
-Profile: PR_TypeOfBiopsy
+Profile: PR_Biopsy
 Parent: Procedure
-Id: PR-TypeOfBiopsy
+Id: PR-Biopsy
 Title: "Procedure: biopsy"
 Description: "This profile represents the biopsy procedure performed on a patient."
 * category 1..1 
