@@ -22,7 +22,7 @@ Usage: #definition
 * sourceUri = Canonical(StudyVariables)
 * targetUri = "http://hl7.org/fhir/r4"
 * group[+].source = Canonical(StudyVariables)
-* group[=].target = Canonical(PR_TypeOfBiopsy)
+* group[=].target = Canonical(PR_Biopsy)
 * group[=].element[+].code = #StudyVariables.typeOfBiopsy
 * group[=].element[=].display = "Type of biopsy"
 * group[=].element[=].target[+].code = #Procedure.code
