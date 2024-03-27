@@ -29,7 +29,7 @@ Usage: #definition
 * group[=].element[=].target[=].equivalence = #relatedto
 * group[=].element[+].code = #CancerEpisode.ageAtBiopsy
 * group[=].element[=].display = "Age at Biopsy"
-* group[=].element[=].target[+].code = #Procedure.occurrenceAge
+* group[=].element[=].target[+].code = #Procedure.performedAge
 * group[=].element[=].target[=].equivalence = #equal
 
 * group[+].source = Canonical(StudyVariables)
