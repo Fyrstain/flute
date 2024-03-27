@@ -161,7 +161,7 @@ groups:
       - ConceptMap/CM-StudyVariables2FHIR
       - ConceptMap/CM-Requirements2StudyVariables
      
-  patientImplementation:
+  StudyVariablesGroup:
     name:  HL7 FHIR Profile implementing the Patient model for Prostate Cancer Study
     description: HL7 FHIR Profile implementing the Patient model with specific prostate cancer considerations
     resources:
@@ -170,12 +170,15 @@ groups:
       - StructureDefinition/PR-ProstateSpecificAntigen
       - StructureDefinition/PR-ProstateVolume
       - StructureDefinition/PR-Biopsy
-      
-  FamilyHistoryImplementation:
-    name:  HL7 FHIR Profile implementing the Family History model for Prostate Cancer
-    description: HL7 FHIR Profile implementing the Family History model with focus on prostate cancer
-    resources:
       - StructureDefinition/PR-ProstateCancerFamilyHistory
+          
+  OutcomeVariablesGroup:
+    name: "Group for Outcome Variable related to Prostate Cancer Prediction"
+    description: "Group containing HL7 FHIR Profiles implementing outcome variable for Prostate Cancer prediction"
+    resources:
+      - StructureDefinition/PR-OutcomeBCN-RC2
+
+      
 #
 #
 # The ImplementationGuide resource defines several other properties

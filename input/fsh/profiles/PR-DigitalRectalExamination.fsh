@@ -8,4 +8,4 @@ Description: "This profile represents the digital rectal examination (DRE) proce
 * subject only Reference(Patient)
 * bodySite = $sct#41216001 "Prostatic structure (body structure)"
 * outcome 1.. 
-* outcome from VS_DREObservationInterpretationCode (required)
+* outcome from VS-DREOutcomeCode (required)
