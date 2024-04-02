@@ -23,36 +23,36 @@ Usage: #definition
 * targetUri = Canonical(StudyVariables)
 
 * group[+].element[+].code = #https://flute.com/Requirements/F-PIL-27
-* group[=].element[=].target[+].code = #CancerEpisode.ageAtBiopsy
+* group[=].element[=].target[+].code = #StudyVariables.ageAtBiopsy
 * group[=].element[=].target[=].display = "Age at Biopsy"
 * group[=].element[=].target[=].equivalence = #relatedto
 
 * group[=].element[+].code = #https://flute.com/Requirements/F-PIL-7
-* group[=].element[=].target[+].code = #StudyVariables.PCaFamilyHistory
+* group[=].element[=].target[+].code = #StudyVariables.pcaFamilyHistory
 * group[=].element[=].target[=].display = "PCa family history"
 * group[=].element[=].target[=].equivalence = #relatedto
 
 * group[=].element[+].code = #https://flute.com/Requirements/F-PIL-28
-* group[=].element[=].target[+].code = #CancerEpisode.typeOfBiopsy
+* group[=].element[=].target[+].code = #StudyVariables.typeOfBiopsy
 * group[=].element[=].target[=].display = "Type of Biopsy"
 * group[=].element[=].target[=].equivalence = #relatedto
 
 * group[=].element[+].code = #https://flute.com/Requirements/F-PIL-29
-* group[=].element[=].target[+].code = #StudyVariables.PSA
+* group[=].element[=].target[+].code = #StudyVariables.psa
 * group[=].element[=].target[=].display = "PSA"
 * group[=].element[=].target[=].equivalence = #relatedto
 
 * group[=].element[+].code = #https://flute.com/Requirements/F-PIL-30
-* group[=].element[=].target[+].code = #CancerEpisode.DRE
+* group[=].element[=].target[+].code = #StudyVariables.dre
 * group[=].element[=].target[=].display = "Rectal examination"
 * group[=].element[=].target[=].equivalence = #relatedto
 
 * group[=].element[+].code = #https://flute.com/Requirements/F-PIL-31
-* group[=].element[=].target[+].code = #CancerEpisode.prostateVolume
+* group[=].element[=].target[+].code = #StudyVariables.prostateVolume
 * group[=].element[=].target[=].display = "MRI-prostate volume"
 * group[=].element[=].target[=].equivalence = #relatedto
 
 * group[=].element[+].code = #https://flute.com/Requirements/F-PIL-32
-* group[=].element[=].target[+].code = #CancerEpisode.PIRADS
+* group[=].element[=].target[+].code = #StudyVariables.pirads
 * group[=].element[=].target[=].display = "PI-RADS"
 * group[=].element[=].target[=].equivalence = #relatedto

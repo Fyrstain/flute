@@ -27,7 +27,7 @@ Usage: #definition
 * group[=].element[=].display = "Type of biopsy"
 * group[=].element[=].target[+].code = #Procedure.code
 * group[=].element[=].target[=].equivalence = #relatedto
-* group[=].element[+].code = #CancerEpisode.ageAtBiopsy
+* group[=].element[+].code = #StudyVariables.ageAtBiopsy
 * group[=].element[=].display = "Age at Biopsy"
 * group[=].element[=].target[+].code = #Procedure.performedAge
 * group[=].element[=].target[=].equivalence = #equal
