@@ -1,10 +1,10 @@
 Alias: $launchContext = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
 
-Instance: EXP-Questionnaire-StudyVariable
+Instance: Questionnaire-StudyVariable
 InstanceOf: Questionnaire
-Usage: #example
-* url = "https://flute.com/fhir/Questionnaire/EXP-Questionnaire-StudyVariable"
+Usage: #definition
+* url = "https://flute.com/fhir/Questionnaire/Questionnaire-StudyVariable"
 * version = "1.0.0"
 * name = "StudyVariableExtraction"
 * title = "Study variable Extraction"
@@ -70,3 +70,9 @@ Usage: #example
 * item[=].answerOption[+].valueInteger = 3
 * item[=].answerOption[+].valueInteger = 4
 * item[=].answerOption[+].valueInteger = 5
+
+* item[+].linkId = "imaging-links"
+* item[=].text = "Attached Images"
+* item[=].type = #attachment
+* item[=].required = true
+* item[=].repeats = true
