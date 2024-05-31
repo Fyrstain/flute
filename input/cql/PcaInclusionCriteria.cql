@@ -15,7 +15,7 @@ code "susceptible": '131196009' from "SNOMED" display 'susceptible'
 context Patient 
 
 define "hasElevatedPsa":
-    exists([Observation:"psa"] O where O.status = 'final' and O.value >= 3 'ng/ml')
+    exists([Observation:"psa"] O where O.status = 'final' and O.value >= 3 'ng/mL')
 
 
 define "isAbnormalDre":
