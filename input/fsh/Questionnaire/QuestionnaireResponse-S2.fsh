@@ -41,12 +41,14 @@ Usage: #example
 * item[=].item[=].text = "Biopsy"
 * item[=].item[=].answer.valueCoding.system = $sct
 * item[=].item[=].answer.valueCoding.code = #86273004
+* item[=].item[=].answer.valueCoding.display = "Biopsy"
 
 * item[=].item[+].linkId = "biopsy-bodySite"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure.bodySite.coding"
 * item[=].item[=].text = "Biopsy bodySite"
 * item[=].item[=].answer.valueCoding.system = $sct
 * item[=].item[=].answer.valueCoding.code = #41216001
+* item[=].item[=].answer.valueCoding.display = "Prostatic structure (body structure)"
 
 * item[+].linkId = "family-history-group"
 * item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory"
@@ -88,6 +90,7 @@ Usage: #example
 * item[=].item[=].text = "PSA code"
 * item[=].item[=].answer.valueCoding.system = $loinc
 * item[=].item[=].answer.valueCoding.code = #2857-1
+* item[=].item[=].answer.valueCoding.display = "Prostate specific Ag"
 
 * item[=].item[+].linkId = "psa-status"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateSpecificAntigen#Observation.status"
@@ -114,6 +117,7 @@ Usage: #example
 * item[=].item[=].text = "DRE code"
 * item[=].item[=].answer.valueCoding.system = $sct
 * item[=].item[=].answer.valueCoding.code = #410006001
+* item[=].item[=].answer.valueCoding.display = "digital rectal examination"
 
 * item[=].item[+].linkId = "dre-status"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure.status"
@@ -126,6 +130,7 @@ Usage: #example
 * item[=].item[=].text = "DRE bodySite"
 * item[=].item[=].answer.valueCoding.system = $sct
 * item[=].item[=].answer.valueCoding.code = #41216001
+* item[=].item[=].answer.valueCoding.display = "Prostatic structure (body structure)"
 
 * item[=].item[+].linkId = "dre-subject"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure.subject"
@@ -147,6 +152,7 @@ Usage: #example
 * item[=].item[=].text = "Prostate volume code"
 * item[=].item[=].answer.valueCoding.system = $sct
 * item[=].item[=].answer.valueCoding.code = #1297142007
+* item[=].item[=].answer.valueCoding.display = "Volume of prostate"
 
 * item[=].item[+].linkId = "prostate-status"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation.status"
@@ -159,6 +165,7 @@ Usage: #example
 * item[=].item[=].text = "Prostate volume bodySite"
 * item[=].item[=].answer.valueCoding.system = $sct
 * item[=].item[=].answer.valueCoding.code = #41216001
+* item[=].item[=].answer.valueCoding.display = "Prostatic structure (body structure)"
 
 * item[=].item[+].linkId = "prostate-subject"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation.subject"
@@ -178,6 +185,7 @@ Usage: #example
 * item[=].item[=].text = "PI-RADS code"
 * item[=].item[=].answer.valueCoding.system = $sct
 * item[=].item[=].answer.valueCoding.code = #719178004
+* item[=].item[=].answer.valueCoding.display = "Multiparametric magnetic resonance imaging of prostate"
 
 * item[=].item[+].linkId = "pirads-status"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-PIRADSScore#Observation.status"
