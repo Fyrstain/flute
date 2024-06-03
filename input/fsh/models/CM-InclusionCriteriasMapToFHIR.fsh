@@ -23,7 +23,7 @@ Usage: #definition
 * group[=].target = Canonical(PR_ProstateSpecificAntigen)
 * group[=].element[0].code = #StudyVariables.psa
 * group[=].element[=].display = "PSA"
-* group[=].element[=].target[+].code = #Observation.where(code='http://loinc.org|19195-7').value
+* group[=].element[=].target[+].code = #Observation.where(code='http://loinc.org|2857-1').value
 * group[=].element[=].target[=].equivalence = #equal
 
 * group[+].source = Canonical(StudyVariables)

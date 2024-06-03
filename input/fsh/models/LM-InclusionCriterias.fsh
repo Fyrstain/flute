@@ -12,5 +12,5 @@ Title: "Prostate Cancer Study Variables to FHIR R4 Profiles"
 Source: InclusionCriterias
 Target: "http://hl7.org/fhir/r4"
 * -> "FHIR R4"
-* psa -> "Observation.where(code = 'http://loinc.org|19195-7').value"
+* psa -> "Observation.where(code = 'http://loinc.org|2857-1').value"
 * dre -> "Procedure.where(code = 'http://snomed.info/sct|410006001').outcome"
