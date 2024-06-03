@@ -1,13 +1,13 @@
 Alias: $sct = http://snomed.info/sct
 Alias: $loinc = http://loinc.org
 
-Instance: Questionnaire-StudyVariable-S2-null-response
+Instance: Questionnaire-StudyVariable-S2
 InstanceOf: QuestionnaireResponse
 Usage: #example
-* contained = Questionnaire-StudyVariable
+//* contained = Questionnaire-StudyVariable
 * extension.url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-questionnaire"
 * extension.valueReference = Reference(Questionnaire-StudyVariable)
-* questionnaire = "https://flute.com/fhir/Questionnaire/Questionnaire-StudyVariable"
+* questionnaire = Canonical(Questionnaire-StudyVariable)
 * status = #in-progress
 * subject = Reference(EXP-S2-Patient)
 * item[+].linkId = "procedure-group"
