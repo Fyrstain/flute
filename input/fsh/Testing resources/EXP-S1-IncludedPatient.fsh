@@ -5,6 +5,7 @@ Alias: $sct = http://snomed.info/sct
 
 Instance: EXP-S1-IncludedPatient
 InstanceOf: Bundle
+Description: "This bundle includes all the resources for a patient who has been included in the study."
 Usage: #example
 * meta.lastUpdated = "2014-08-18T01:43:30Z"
 * type = #transaction
@@ -39,8 +40,7 @@ Usage: #example
 
 Instance: EXP-S1-Patient
 InstanceOf: Patient
-Description: "Exemple de patient pour le scénario 1"
-Usage: #inline
+Usage: #example
 * active = true
 * name.use = #official
 * name.family = "Dubois"
@@ -50,7 +50,6 @@ Usage: #inline
 
 Instance: EXP-S1-Procedure-Biopsy
 InstanceOf: PR-Biopsy
-Description: "Exemple de procedure biopsy pour le scénario 1"
 Usage: #inline
 * status = #completed
 * category = $sct#27582007 "Repeated"
@@ -72,7 +71,6 @@ Usage: #inline
 
 Instance: EXP-S1-Observation-PSA
 InstanceOf: PR-ProstateSpecificAntigen
-Description: "Exemple d'observation pour la perception de la santé dans le scénario 1"
 Usage: #inline
 * status = #final
 * code = $loinc#2857-1 "Prostate specific Ag"
@@ -83,7 +81,6 @@ Usage: #inline
 
 Instance: EXP-S1-Procedure-DRE
 InstanceOf: PR-DigitalRectalExamination
-Description: "Exemple de procedure biopsy pour le scénario 1"
 Usage: #inline
 * status = #completed
 * code = $sct#410006001 "digital rectal examination"
@@ -94,7 +91,6 @@ Usage: #inline
 
 Instance: EXP-S1-Observation-PV
 InstanceOf: PR-ProstateVolume
-Description: "Exemple d'observation pour la perception de la santé dans le scénario 1"
 Usage: #inline
 * status = #final
 * code = $sct#1297142007 "Volume of prostate"
@@ -105,7 +101,6 @@ Usage: #inline
 
 Instance: EXP-S1-Observation-PIRADS
 InstanceOf: PR-PIRADSScore
-Description: "Exemple d'observation pour la perception de la santé dans le scénario 1"
 Usage: #inline
 * status = #final
 * code = $sct#719178004 "Multiparametric magnetic resonance imaging of prostate"
