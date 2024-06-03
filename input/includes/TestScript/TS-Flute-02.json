@@ -1,0 +1,322 @@
+{
+    "resourceType": "TestScript",
+    "id": "TS-Flute-02",
+    "url": "https://flute.com/ValueSet/VS-PCa/TestScript/TS-Flute-02",
+    "version": "1.0.0",
+    "name": "PcaInclusionCriteriaS02",
+    "title": "Study Inclusion Criteria - Scenario 02",
+    "status": "draft",
+    "experimental": true,
+    "date": "2024-03-14",
+    "publisher": "Charleroi",
+    "contact": [
+      {
+        "name": "Charleroi",
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://www.ghdc.be/Charleroi"
+          }
+        ]
+      }
+    ],
+    "description": "This TestScript evaluates the inclusion criteria for patients participating in the study.",
+    "jurisdiction": [
+      {
+        "coding": [
+          {
+            "code": "BEL",
+            "system": "urn:iso:std:iso:3166",
+            "display": "Belgium"
+          }
+        ]
+      }
+    ],
+    "purpose": "To verify that the CQL library correctly identifies patients who meet the inclusion criteria for the study.",
+    "origin": [
+      {
+        "index": 1,
+        "profile": {
+          "code": "FHIR-Client",
+          "system": "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"
+        }
+      }
+    ],
+    "destination": [
+      {
+        "index": 1,
+        "profile": {
+          "code": "FHIR-Server",
+          "system": "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
+        }
+      }
+    ],
+    "fixture": [
+      {
+        "id": "fixture-transaction-request",
+        "autocreate": false,
+        "autodelete": false,
+        "resource": {
+          "reference": "DocumentReference/EXP-S2-ExcludedPatient"
+        }
+      },
+      {
+        "id": "fixture-transaction-teardown",
+        "autocreate": false,
+        "autodelete": false,
+        "resource": {
+          "reference": "DocumentReference/EXP-Teardown"
+        }
+      },
+      {
+        "id": "fixture-valueset-create",
+        "autocreate": false,
+        "autodelete": false,
+        "resource": {
+          "reference": "DocumentReference/VS-PCa"
+        }
+      },
+      {
+        "id": "fixture-library-create",
+        "autocreate": false,
+        "autodelete": false,
+        "resource": {
+          "reference": "DocumentReference/PcaInclusionCriteria"
+        }
+      }
+    ],
+    "variable": [
+      {
+        "id": "patientId",
+        "name": "patientId",
+        "expression": "Bundle.entry[0].response.location",
+        "sourceId": "fixture-transaction-response"
+      },
+      {
+        "id": "obsPIRADSId",
+        "name": "obsPIRADSId",
+        "expression": "Bundle.entry[6].response.location",
+        "sourceId": "fixture-transaction-response"
+      },
+      {
+        "id": "obsPVId",
+        "name": "obsPVId",
+        "expression": "Bundle.entry[5].response.location",
+        "sourceId": "fixture-transaction-response"
+      },
+      {
+        "id": "proDREId",
+        "name": "proDREId",
+        "expression": "Bundle.entry[4].response.location",
+        "sourceId": "fixture-transaction-response"
+      },
+      {
+        "id": "obsPSAId",
+        "name": "obsPSAId",
+        "expression": "Bundle.entry[3].response.location",
+        "sourceId": "fixture-transaction-response"
+      },
+      {
+        "id": "famPCId",
+        "name": "famPCId",
+        "expression": "Bundle.entry[2].response.location",
+        "sourceId": "fixture-transaction-response"
+      },
+      {
+        "id": "proBiopsyId",
+        "name": "proBiopsyId",
+        "expression": "Bundle.entry[1].response.location",
+        "sourceId": "fixture-transaction-response"
+      }
+    ],
+    "setup": {
+      "action": [
+        {
+          "operation": {
+            "id": "SET-01",
+            "type": {
+              "code": "transaction",
+              "system": "http://hl7.org/fhir/restful-interaction"
+            },
+            "resource": "Bundle",
+            "description": "Sent a transaction request on the test server using the id from fixture-transaction-request.",
+            "accept": "application/fhir+json",
+            "contentType": "application/fhir+json",
+            "encodeRequestUrl": false,
+            "method": "post",
+            "responseId": "fixture-transaction-response",
+            "sourceId": "fixture-transaction-request"
+          }
+        },
+        {
+          "assert": {
+            "id": "SET-01-ASS-01",
+            "label": "HTTPStatus",
+            "description": "Confirm that the returned HTTP status is 200.",
+            "direction": "response",
+            "responseCode": "200",
+            "warningOnly": false
+          }
+        },
+        {
+          "operation": {
+            "id": "SET-02",
+            "type": {
+              "code": "update",
+              "system": "http://hl7.org/fhir/restful-interaction"
+            },
+            "resource": "ValueSet",
+            "description": "Create the ValueSet resource on the test server using the id from fixture-valueset-create.",
+            "accept": "application/fhir+json",
+            "contentType": "application/fhir+json",
+            "encodeRequestUrl": false,
+            "method": "put",
+            "sourceId": "fixture-valueset-create"
+          }
+        },
+        {
+          "assert": {
+            "id": "SET-02-ASS-01",
+            "label": "HTTPStatus",
+            "description": "Confirm that the returned HTTP status is 201.",
+            "direction": "response",
+            "responseCode": "201",
+            "warningOnly": false
+          }
+        },
+        {
+          "operation": {
+            "id": "SET-03",
+            "type": {
+              "code": "update",
+              "system": "http://hl7.org/fhir/restful-interaction"
+            },
+            "resource": "Library",
+            "description": "Create the Library resource on the test server using the id from fixture-library-create.",
+            "accept": "application/fhir+json",
+            "contentType": "application/fhir+json",
+            "encodeRequestUrl": false,
+            "method": "put",
+            "sourceId": "fixture-library-create"
+          }
+        },
+        {
+          "assert": {
+            "id": "SET-03-ASS-01",
+            "label": "HTTPStatus",
+            "description": "Confirm that the returned HTTP status is 201.",
+            "direction": "response",
+            "responseCode": "201",
+            "warningOnly": false
+          }
+        }
+      ]
+    },
+    "test": [
+      {
+        "id": "1-EvaluateLibrary",
+        "name": "Evaluation of CQL Library for Prostate Cancer Inclusion",
+        "description": "This test evaluates the inclusion criteria defined in the CQL library for a prostate cancer study.",
+        "action": [
+          {
+            "operation": {
+              "id": "TES-01",
+              "extension": [
+                {
+                  "url": "http://fyrstain.com/pdt/returnResourceType",
+                  "valueString": "Parameters"
+                }
+              ],
+              "type": {
+                "code": "operation",
+                "system": "http://hl7.org/fhir/restful-interaction"
+              },
+              "resource": "Library",
+              "description": "Evaluate the CQL library to check if the patient meets the inclusion criteria.",
+              "contentType": "application/fhir+json",
+              "encodeRequestUrl": false,
+              "method": "get",
+              "params": "$evaluate?subject={{patientId}}",
+              "targetId": "fixture-library-create"
+            }
+          },
+          {
+            "assert": {
+              "id": "TES-01-ASS-01",
+              "label": "HTTPStatus",
+              "description": "Confirm that the returned HTTP status is 200.",
+              "direction": "response",
+              "responseCode": "200",
+              "warningOnly": false
+            }
+          },
+          {
+            "assert": {
+              "id": "TES-01-ASS-02",
+              "label": "Resource",
+              "description": "Confirm that the returned resource type is Parameters.",
+              "direction": "response",
+              "resource": "Parameters",
+              "warningOnly": false
+            }
+          },
+          {
+            "assert": {
+              "id": "TES-01-ASS-03",
+              "label": "FHIRPath",
+              "description": "Confirm that the returned Parameters resource contains an 'isIncluded' parameter with a value of false.",
+              "direction": "response",
+              "expression": "Parameters.parameter.where(name = 'isIncluded' ).value=false",
+              "warningOnly": false
+            }
+          }
+        ]
+      }
+    ],
+    "teardown": {
+      "action": [
+        {
+          "operation": {
+            "id": "TED-01",
+            "type": {
+              "code": "transaction",
+              "system": "http://hl7.org/fhir/restful-interaction"
+            },
+            "resource": "Bundle",
+            "description": "Delete the testing resources on the test server using the id from fixture-transaction-teardown.",
+            "encodeRequestUrl": true,
+            "method": "delete",
+            "sourceId": "fixture-transaction-teardown"
+          }
+        },
+        {
+          "operation": {
+            "id": "TED-02",
+            "type": {
+              "code": "delete",
+              "system": "http://hl7.org/fhir/restful-interaction"
+            },
+            "resource": "ValueSet",
+            "description": "Delete the ValueSet resource on the test server using the id from fixture-library-create.",
+            "encodeRequestUrl": true,
+            "method": "delete",
+            "targetId": "fixture-valueset-create"
+          }
+        },
+        {
+          "operation": {
+            "id": "TED-03",
+            "type": {
+              "code": "delete",
+              "system": "http://hl7.org/fhir/restful-interaction"
+            },
+            "resource": "Library",
+            "description": "Delete the Library resource on the test server using the id from fixture-library-create.",
+            "encodeRequestUrl": true,
+            "method": "delete",
+            "targetId": "fixture-library-create"
+          }
+        }
+      ]
+    }
+  }
