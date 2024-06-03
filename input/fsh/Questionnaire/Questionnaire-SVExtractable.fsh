@@ -53,7 +53,7 @@ Usage: #definition
 * item[=].item[=].code = $loinc#LP200041-4
 
 * item[=].item[+].linkId = "type-of-biopsy"
-* item[=].item[=].definition = "http://fhir.org#Procedure.code"
+* item[=].item[=].definition = "http://fhir.org#Procedure.code.coding"
 * item[=].item[=].text = "Type of biopsy"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -67,7 +67,7 @@ Usage: #definition
 * item[=].required = false
 
 * item[=].item[+].linkId = "family-history-pca"
-* item[=].item[=].definition = "http://fhir.org#FamilyMemberHistory.condition.code"
+* item[=].item[=].definition = "http://fhir.org#FamilyMemberHistory.condition.code.coding"
 * item[=].item[=].text = "Family history of prostate cancer"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -91,10 +91,18 @@ Usage: #definition
 * item[=].item[=].repeats = false
 * item[=].item[=].code = $sct#399068003
 
+* item[=].item[+].linkId = "family-relationship"
+* item[=].item[=].definition = "http://fhir.org#FamilyMemberHistory.relationship.coding"
+* item[=].item[=].text = "Family relationship"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+* item[=].item[=].code = $sct#399068003
+
 * item[+].linkId = "observation-psa-group"
 * item[=].definition = "http://fhir.org#Observation"
 * item[=].type = #group
-* item[=].text = "Observation group"
+* item[=].text = "Observation PSA group"
 * item[=].required = false
 
 * item[=].item[+].linkId = "psa"
@@ -106,7 +114,7 @@ Usage: #definition
 * item[=].item[=].code = $loinc#LP18193-0
 
 * item[=].item[+].linkId = "psa-code"
-* item[=].item[=].definition = "http://fhir.org#Observation.code"
+* item[=].item[=].definition = "http://fhir.org#Observation.code.coding"
 * item[=].item[=].text = "PSA code" 
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -125,11 +133,11 @@ Usage: #definition
 * item[+].linkId = "observation-dre-group"
 * item[=].definition = "http://fhir.org#Observation"
 * item[=].type = #group
-* item[=].text = "Observation group"
+* item[=].text = "Observation DRE group"
 * item[=].required = false
 
 * item[=].item[+].linkId = "dre"
-* item[=].item[=].definition = "http://fhir.org#Observation.interpretation"
+* item[=].item[=].definition = "http://fhir.org#Observation.interpretation.coding"
 * item[=].item[=].text = "Results of digital rectal examination"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -138,7 +146,7 @@ Usage: #definition
 * item[=].item[=].answerValueSet = "https://flute.com/fhir/ValueSet/VS-DREOutcomeCode"
 
 * item[=].item[+].linkId = "dre-code"
-* item[=].item[=].definition = "http://fhir.org#Observation.code"
+* item[=].item[=].definition = "http://fhir.org#Observation.code.coding"
 * item[=].item[=].text = "DRE code" 
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -157,7 +165,7 @@ Usage: #definition
 * item[+].linkId = "observation-prostate-volume-group"
 * item[=].definition = "http://fhir.org#Observation"
 * item[=].type = #group
-* item[=].text = "Observation group"
+* item[=].text = "Observation Prostate Volume group"
 * item[=].required = false
 
 * item[=].item[+].linkId = "prostate-volume"
@@ -170,7 +178,7 @@ Usage: #definition
 * item[=].item[=].code = $sct#41216001
 
 * item[=].item[+].linkId = "prostate-code"
-* item[=].item[=].definition = "http://fhir.org#Observation.code"
+* item[=].item[=].definition = "http://fhir.org#Observation.code.coding"
 * item[=].item[=].text = "Prostate volume code" 
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -198,7 +206,7 @@ Usage: #definition
 * item[+].linkId = "observation-pirads-group"
 * item[=].definition = "http://fhir.org#Observation"
 * item[=].type = #group
-* item[=].text = "Observation group"
+* item[=].text = "Observation PI-RADS group"
 * item[=].required = false
 
 * item[=].item[+].linkId = "pirads"
@@ -215,7 +223,7 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueInteger = 5
 
 * item[=].item[+].linkId = "pirads-code"
-* item[=].item[=].definition = "http://fhir.org#Observation.code"
+* item[=].item[=].definition = "http://fhir.org#Observation.code.coding"
 * item[=].item[=].text = "PI-RADS code" 
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
