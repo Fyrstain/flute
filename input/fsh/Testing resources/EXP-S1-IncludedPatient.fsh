@@ -40,7 +40,7 @@ Usage: #example
 Instance: EXP-S1-Patient
 InstanceOf: Patient
 Description: "Exemple de patient pour le scénario 1"
-Usage: #inline
+Usage: #example
 * active = true
 * name.use = #official
 * name.family = "Dubois"
