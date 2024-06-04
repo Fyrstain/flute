@@ -1,5 +1,6 @@
 Instance: EXP-S2-ExcludedPatient
 InstanceOf: Bundle
+Description: "This bundle includes all the resources for a patient who has been excluded from the study."
 Usage: #example
 * meta.lastUpdated = "2014-08-18T01:43:30Z"
 * type = #transaction
