@@ -16,58 +16,69 @@ Usage: #definition
 * jurisdiction = $m49.htm#001 "World"
 
 * item[+].linkId = "procedure-group"
-* item[=].definition = "http://fhir.org#Procedure"
+* item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure"
 * item[=].type = #group
 * item[=].required = false
 
 * item[=].item[+].linkId = "patient"
-* item[=].item[=].definition = "http://fhir.org#Procedure.subject"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure.subject"
 * item[=].item[=].text = "Patient"
 * item[=].item[=].type = #reference
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 
-* item[=].item[+].linkId = "category"
-* item[=].item[=].definition = "http://fhir.org#Procedure.category.coding"
-* item[=].item[=].text = "Category"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LP200041-4
-
-* item[=].item[+].linkId = "procedure-status"
-* item[=].item[=].definition = "http://fhir.org#Procedure.status"
-* item[=].item[=].text = "Status"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LP200041-4
-* item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/event-status"
-
-* item[=].item[+].linkId = "age-at-biopsy"
-* item[=].item[=].definition = "http://fhir.org#Procedure.performed"
-* item[=].item[=].text = "Age at biopsy"
-* item[=].item[=].type = #quantity
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LP200041-4
-
 * item[=].item[+].linkId = "type-of-biopsy"
-* item[=].item[=].definition = "http://fhir.org#Procedure.code.coding"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure.category.coding"
 * item[=].item[=].text = "Type of biopsy"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LP200041-4
 * item[=].item[=].answerValueSet = "https://flute.com/fhir/ValueSet/VS-BiopsyType"
 
+* item[=].item[+].linkId = "procedure-status"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure.status"
+* item[=].item[=].text = "Status"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = true
+* item[=].item[=].code = $sct#86273004
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/event-status#completed
+
+* item[=].item[+].linkId = "age-at-biopsy"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure.performed"
+* item[=].item[=].text = "Age at biopsy"
+* item[=].item[=].type = #quantity
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+* item[=].item[=].code = $sct#86273004
+
+* item[=].item[+].linkId = "biopsy"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure.code.coding"
+* item[=].item[=].text = "Biopsy"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = $sct#86273004 "Biopsy"
+
+* item[=].item[+].linkId = "biopsy-bodySite"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure.bodySite.coding"
+* item[=].item[=].code = $sct#86273004
+* item[=].item[=].text = "Biopsy bodySite"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
+
 * item[+].linkId = "family-history-group"
-* item[=].definition = "http://fhir.org#FamilyMemberHistory"
+* item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory"
 * item[=].type = #group
 * item[=].required = false
 
 * item[=].item[+].linkId = "family-history-pca"
-* item[=].item[=].definition = "http://fhir.org#FamilyMemberHistory.condition.code.coding"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory.condition.code.coding"
 * item[=].item[=].text = "Family history of prostate cancer"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
@@ -75,16 +86,17 @@ Usage: #definition
 * item[=].item[=].code = $sct#399068003
 
 * item[=].item[+].linkId = "family-status"
-* item[=].item[=].definition = "http://fhir.org#FamilyMemberHistory.status"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory.status"
 * item[=].item[=].text = "Family Status"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].code = $sct#399068003
-* item[=].item[=].answerValueSet = "http://hl7.org/fhir/history-status"
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/history-status#completed
 
 * item[=].item[+].linkId = "family-patient"
-* item[=].item[=].definition = "http://fhir.org#FamilyMemberHistory.patient"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory.patient"
 * item[=].item[=].text = "Family Patient"
 * item[=].item[=].type = #reference
 * item[=].item[=].required = true
@@ -92,130 +104,170 @@ Usage: #definition
 * item[=].item[=].code = $sct#399068003
 
 * item[=].item[+].linkId = "family-relationship"
-* item[=].item[=].definition = "http://fhir.org#FamilyMemberHistory.relationship.coding"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory.relationship.coding"
 * item[=].item[=].text = "Family relationship"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].code = $sct#399068003
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = http://terminology.hl7.org/CodeSystem/v3-RoleCode#FAMMEMB
 
 * item[+].linkId = "observation-psa-group"
-* item[=].definition = "http://fhir.org#Observation"
+* item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateSpecificAntigen#Observation"
 * item[=].type = #group
 * item[=].text = "Observation PSA group"
 * item[=].required = false
 
 * item[=].item[+].linkId = "psa"
-* item[=].item[=].definition = "http://fhir.org#Observation.value"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateSpecificAntigen#Observation.value"
 * item[=].item[=].text = "Measure of prostate-specific antigen reported in ng/ml" 
 * item[=].item[=].type = #quantity
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LP18193-0
+* item[=].item[=].code = $loinc#2857-1
 
 * item[=].item[+].linkId = "psa-code"
-* item[=].item[=].definition = "http://fhir.org#Observation.code.coding"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateSpecificAntigen#Observation.code.coding"
 * item[=].item[=].text = "PSA code" 
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LP18193-0
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = $loinc#2857-1 "Prostate specific Ag"
 
 * item[=].item[+].linkId = "psa-status"
-* item[=].item[=].definition = "http://fhir.org#Observation.status"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateSpecificAntigen#Observation.status"
 * item[=].item[=].text = "PSA Status"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LP18193-0
-* item[=].item[=].answerValueSet = "http://hl7.org/fhir/observation-status"
+* item[=].item[=].code = $loinc#2857-1
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/observation-status#final
 
-* item[+].linkId = "observation-dre-group"
-* item[=].definition = "http://fhir.org#Observation"
+* item[=].item[+].linkId = "psa-subject"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateSpecificAntigen#Observation.subject"
+* item[=].item[=].text = "PSA subject"
+* item[=].item[=].type = #reference
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+
+* item[+].linkId = "procedure-dre-group"
+* item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure"
 * item[=].type = #group
-* item[=].text = "Observation DRE group"
+* item[=].text = "Procedure DRE group"
 * item[=].required = false
 
 * item[=].item[+].linkId = "dre"
-* item[=].item[=].definition = "http://fhir.org#Observation.interpretation.coding"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure.outcome.coding"
 * item[=].item[=].text = "Results of digital rectal examination"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LL1478-8
+* item[=].item[=].code = $sct#410006001
+* item[=].item[=].readOnly = true
 * item[=].item[=].answerValueSet = "https://flute.com/fhir/ValueSet/VS-DREOutcomeCode"
 
 * item[=].item[+].linkId = "dre-code"
-* item[=].item[=].definition = "http://fhir.org#Observation.code.coding"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure.code.coding"
 * item[=].item[=].text = "DRE code" 
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LL1478-8
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = $sct#410006001 "digital rectal examination"
 
 * item[=].item[+].linkId = "dre-status"
-* item[=].item[=].definition = "http://fhir.org#Observation.status"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure.status"
 * item[=].item[=].text = "DRE Status"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $loinc#LL1478-8
-* item[=].item[=].answerValueSet = "http://hl7.org/fhir/observation-status"
+* item[=].item[=].code = $sct#410006001
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/event-status#completed
+
+* item[=].item[+].linkId = "dre-bodySite"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure.bodySite.coding"
+* item[=].item[=].text = "DRE bodySite"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
+
+* item[=].item[+].linkId = "dre-subject"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure.subject"
+* item[=].item[=].text = "DRE subject"
+* item[=].item[=].type = #reference
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
 
 * item[+].linkId = "observation-prostate-volume-group"
-* item[=].definition = "http://fhir.org#Observation"
+* item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation"
 * item[=].type = #group
 * item[=].text = "Observation Prostate Volume group"
 * item[=].required = false
 
 * item[=].item[+].linkId = "prostate-volume"
-* item[=].item[=].definition = "http://fhir.org#Observation.value"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation.value"
 * item[=].item[=].text = "Prostate volume in cc"
 * item[=].item[=].type = #quantity
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $sct#118565006
+* item[=].item[=].code = $sct#1297142007
 * item[=].item[=].code = $sct#41216001
 
 * item[=].item[+].linkId = "prostate-code"
-* item[=].item[=].definition = "http://fhir.org#Observation.code.coding"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation.code.coding"
 * item[=].item[=].text = "Prostate volume code" 
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $sct#118565006
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = $sct#1297142007 "Volume of prostate"
 
 * item[=].item[+].linkId = "prostate-status"
-* item[=].item[=].definition = "http://fhir.org#Observation.status"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation.status"
 * item[=].item[=].text = "Prostate volume Status"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $sct#118565006
+* item[=].item[=].code = $sct#1297142007
 * item[=].item[=].code = $sct#41216001
-* item[=].item[=].answerValueSet = "http://hl7.org/fhir/observation-status"
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/observation-status#final
 
 * item[=].item[+].linkId = "prostate-bodySite"
-* item[=].item[=].definition = "http://fhir.org#Observation.bodySite"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation.bodySite.coding"
 * item[=].item[=].text = "Prostate volume bodySite" 
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $sct#41216001
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
+
+* item[=].item[+].linkId = "prostate-subject"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation.subject"
+* item[=].item[=].text = "Prostate subject"
+* item[=].item[=].type = #reference
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
 
 * item[+].linkId = "observation-pirads-group"
-* item[=].definition = "http://fhir.org#Observation"
+* item[=].definition = "https://flute.com/StructureDefinition/PR-PIRADSScore#Observation"
 * item[=].type = #group
 * item[=].text = "Observation PI-RADS group"
 * item[=].required = false
 
 * item[=].item[+].linkId = "pirads"
-* item[=].item[=].definition = "http://fhir.org#Observation.value"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-PIRADSScore#Observation.value"
 * item[=].item[=].text = "PI-RADS score"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $sct#52988006
+* item[=].item[=].code = $sct#719178004
 * item[=].item[=].answerOption[+].valueInteger = 1
 * item[=].item[=].answerOption[+].valueInteger = 2
 * item[=].item[=].answerOption[+].valueInteger = 3
@@ -223,18 +275,27 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueInteger = 5
 
 * item[=].item[+].linkId = "pirads-code"
-* item[=].item[=].definition = "http://fhir.org#Observation.code.coding"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-PIRADSScore#Observation.code.coding"
 * item[=].item[=].text = "PI-RADS code" 
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $sct#52988006
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = $sct#719178004 "Multiparametric magnetic resonance imaging of prostate"
 
 * item[=].item[+].linkId = "pirads-status"
-* item[=].item[=].definition = "http://fhir.org#Observation.status"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-PIRADSScore#Observation.status"
 * item[=].item[=].text = "PI-RADS Status"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].code = $sct#52988006
-* item[=].item[=].answerValueSet = "http://hl7.org/fhir/observation-status"
+* item[=].item[=].code = $sct#719178004
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/observation-status#final
+
+* item[=].item[+].linkId = "pirads-subject"
+* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-PIRADSScore#Observation.subject"
+* item[=].item[=].text = "PI-RADS subject"
+* item[=].item[=].type = #reference
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
