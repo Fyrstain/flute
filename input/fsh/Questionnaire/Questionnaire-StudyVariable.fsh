@@ -20,13 +20,6 @@ Usage: #definition
 * item[=].type = #group
 * item[=].required = false
 
-* item[=].item[+].linkId = "patient"
-* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure.subject"
-* item[=].item[=].text = "Patient"
-* item[=].item[=].type = #reference
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-
 * item[=].item[+].linkId = "type-of-biopsy"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure.category.coding"
 * item[=].item[=].text = "Type of biopsy"
@@ -95,14 +88,6 @@ Usage: #definition
 * item[=].item[=].readOnly = true
 * item[=].item[=].initial.valueCoding = http://hl7.org/fhir/history-status#completed
 
-* item[=].item[+].linkId = "family-patient"
-* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory.patient"
-* item[=].item[=].text = "Family Patient"
-* item[=].item[=].type = #reference
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-* item[=].item[=].code = $sct#399068003
-
 * item[=].item[+].linkId = "family-relationship"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory.relationship.coding"
 * item[=].item[=].text = "Family relationship"
@@ -145,13 +130,6 @@ Usage: #definition
 * item[=].item[=].code = $loinc#2857-1
 * item[=].item[=].readOnly = true
 * item[=].item[=].initial.valueCoding = http://hl7.org/fhir/observation-status#final
-
-* item[=].item[+].linkId = "psa-subject"
-* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateSpecificAntigen#Observation.subject"
-* item[=].item[=].text = "PSA subject"
-* item[=].item[=].type = #reference
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
 
 * item[+].linkId = "procedure-dre-group"
 * item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure"
@@ -197,13 +175,6 @@ Usage: #definition
 * item[=].item[=].readOnly = true
 * item[=].item[=].initial.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
 
-* item[=].item[+].linkId = "dre-subject"
-* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-DigitalRectalExamination#Procedure.subject"
-* item[=].item[=].text = "DRE subject"
-* item[=].item[=].type = #reference
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-
 * item[+].linkId = "observation-prostate-volume-group"
 * item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation"
 * item[=].type = #group
@@ -248,13 +219,6 @@ Usage: #definition
 * item[=].item[=].readOnly = true
 * item[=].item[=].initial.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
 
-* item[=].item[+].linkId = "prostate-subject"
-* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateVolume#Observation.subject"
-* item[=].item[=].text = "Prostate subject"
-* item[=].item[=].type = #reference
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-
 * item[+].linkId = "observation-pirads-group"
 * item[=].definition = "https://flute.com/StructureDefinition/PR-PIRADSScore#Observation"
 * item[=].type = #group
@@ -292,10 +256,3 @@ Usage: #definition
 * item[=].item[=].code = $sct#719178004
 * item[=].item[=].readOnly = true
 * item[=].item[=].initial.valueCoding = http://hl7.org/fhir/observation-status#final
-
-* item[=].item[+].linkId = "pirads-subject"
-* item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-PIRADSScore#Observation.subject"
-* item[=].item[=].text = "PI-RADS subject"
-* item[=].item[=].type = #reference
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
