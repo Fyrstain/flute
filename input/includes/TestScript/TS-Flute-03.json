@@ -1,0 +1,109 @@
+{
+  "resourceType": "TestScript",
+  "id": "TS-Flute-03",
+  "url": "https://flute.com/TestScript/TS-Flute-03",
+  "description": "This TestScript is designed to validate the populate of a questionnaire",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://flute.com"
+        }
+      ],
+      "name": "Flute"
+    }
+  ],
+  "origin": [
+    {
+      "index": 1,
+      "profile": {
+        "code": "FHIR-Client",
+        "system": "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"
+      },
+      "url": "http://client-simulator-r4:8080/fhir"
+    }
+  ],
+  "destination": [
+    {
+      "index": 1,
+      "profile": {
+        "code": "FHIR-Server",
+        "system": "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
+      },
+      "url": "https://demonstrator.ovh.fyrstain.com/orchestrator/"
+    }
+  ],
+  "fixture": [
+    {
+      "id": "fixture-questionnaire-create",
+      "autocreate": false,
+      "autodelete": false,
+      "resource": {
+        "reference": "DocumentReference/EXP-DR-Questionnaire-StudyVariable"
+      }
+    }
+  ],
+  "test": [
+    {
+      "action": [
+        {
+          "operation": {
+            "extension": [
+              {
+                "url": "http://fyrstain.com/pdt/returnResourceType",
+                "valueString": "QuestionnaireResponse"
+              }
+            ],
+            "id": "TES-01",
+            "type": {
+              "code": "operation",
+              "system": "http://hl7.org/fhir/restful-interaction"
+            },
+            "resource": "Questionnaire",
+            "origin": 1,
+            "destination": 1,
+            "method": "post",
+            "description": "Populate of questionnaire",
+            "encodeRequestUrl": false,
+            "params": "$populate",
+            "sourceId": "fixture-questionnaire-create"
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-01",
+            "label": "HTTPStatus",
+            "description": "Confirm that the returned HTTP status is 200.",
+            "direction": "response",
+            "responseCode": "200",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-02",
+            "label": "Resource",
+            "description": "Confirm that the returned resource type is QuestionnaireResponse.",
+            "direction": "response",
+            "resource": "QuestionnaireResponse",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        }
+      ],
+      "id": "01-PopulateQuestionnaire",
+      "name": "Populate questionnaire",
+      "description": "Populate questionnaire Study Variable"
+    }
+  ],
+  "version": "1.0",
+  "name": "TestScriptPopulateQuestionnaire",
+  "title": "This TestScript is designed to validate the populate of a questionnaire",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-05-31",
+  "publisher": "Flute",
+  "purpose": "This TestScript is designed to validate the populate of a questionnaire"
+}
