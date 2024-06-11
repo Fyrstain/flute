@@ -40,6 +40,7 @@ Usage: #example
 
 Instance: EXP-S1-Patient
 InstanceOf: Patient
+Description: "The Patient included in the study S1."
 Usage: #example
 * active = true
 * name.use = #official

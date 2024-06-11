@@ -35,7 +35,7 @@ Usage: #example
 
 Instance: EXP-S2-Patient
 InstanceOf: Patient
-Description: "Exemple de patient pour le scénario 1"
+Description: "The Patient excluded in the study S2."
 Usage: #example
 * active = true
 * name.use = #official

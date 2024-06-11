@@ -3,6 +3,7 @@ Alias: $loinc = http://loinc.org
 
 Instance: Questionnaire-StudyVariable-S2
 InstanceOf: QuestionnaireResponse
+Description: "The Questionnaire response for the Patient excluded S2."
 Usage: #example
 //* contained = Questionnaire-StudyVariable
 * extension.url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-questionnaire"
