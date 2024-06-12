@@ -1,7 +1,7 @@
 {
   "resourceType": "TestPlan",
   "id": "TP-Flute-01",
-  "url": "http://isis.com/test/TestPlan/TP-Flute-01",
+  "url": "https://flute.com/TestPlan/TP-Flute-01",
   "title": "TestPlan for the populate of a questionnaire and extract of a questionnaireResponse",
   "description": "TestPlan for the populate of a questionnaire and extract of a questionnaireResponse for the study variable",
   "contact": [
