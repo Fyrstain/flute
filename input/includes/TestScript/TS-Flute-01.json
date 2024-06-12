@@ -1,7 +1,7 @@
 {
     "resourceType": "TestScript",
     "id": "TS-Flute-01",
-    "url": "https://flute.com/ValueSet/VS-PCa/TestScript/TS-Flute-01",
+    "url": "https://flute.com/TestScript/TS-Flute-01",
     "version": "1.0.0",
     "name": "PcaInclusionCriteriaS01",
     "title": "Study Inclusion Criteria - Scenario 01",
@@ -11,27 +11,16 @@
     "publisher": "Charleroi",
     "contact": [
       {
-        "name": "Charleroi",
         "telecom": [
           {
             "system": "url",
-            "value": "https://www.ghdc.be/Charleroi"
+            "value": "https://flute.com"
           }
-        ]
+        ],
+        "name": "Flute"
       }
     ],
     "description": "This TestScript evaluates the inclusion criteria for patients participating in the study.",
-    "jurisdiction": [
-      {
-        "coding": [
-          {
-            "code": "BEL",
-            "system": "urn:iso:std:iso:3166",
-            "display": "Belgium"
-          }
-        ]
-      }
-    ],
     "purpose": "To verify that the CQL library correctly identifies patients who meet the inclusion criteria for the study.",
     "origin": [
       {
