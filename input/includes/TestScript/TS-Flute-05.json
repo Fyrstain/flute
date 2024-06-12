@@ -1,0 +1,232 @@
+{
+  "resourceType": "TestScript",
+  "id": "TS-Flute-05",
+  "url": "https://flute.com/TestScript/TS-Flute-05",
+  "description": "This TestScript is designed to validate the cql library ResearchVariables2 with an extract of a questionnaire response",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://flute.com"
+        }
+      ],
+      "name": "Flute"
+    }
+  ],
+  "origin": [
+    {
+      "index": 1,
+      "profile": {
+        "code": "FHIR-Client",
+        "system": "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"
+      },
+      "url": "http://client-simulator-r4:8080/fhir"
+    }
+  ],
+  "destination": [
+    {
+      "index": 1,
+      "profile": {
+        "code": "FHIR-Server",
+        "system": "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
+      },
+      "url": "https://polus.ovh.fyrstain.com/orchestrator/"
+    }
+  ],
+  "fixture": [
+    {
+      "id": "fixture-paramsBundle-create",
+      "autocreate": false,
+      "autodelete": false,
+      "resource": {
+        "reference": "DocumentReference/EXP-Params-BundleExtract"
+      }
+    },
+    {
+      "id": "fixture-library-create",
+      "autocreate": false,
+      "autodelete": false,
+      "resource": {
+        "reference": "DocumentReference/ResearchVariables2"
+      }
+    }
+  ],
+  "setup": {
+    "action": [
+      {
+        "operation": {
+          "id": "SET-01",
+          "type": {
+            "code": "update",
+            "system": "http://hl7.org/fhir/restful-interaction"
+          },
+          "resource": "Library",
+          "description": "Create the Library resource on the test server using the id from fixture-library-create.",
+          "accept": "application/fhir+json",
+          "contentType": "application/fhir+json",
+          "encodeRequestUrl": false,
+          "method": "put",
+          "sourceId": "fixture-library-create"
+        }
+      },
+      {
+        "assert": {
+          "id": "SET-01-ASS-01",
+          "label": "HTTPStatus",
+          "description": "Confirm that the returned HTTP status is 201.",
+          "direction": "response",
+          "responseCode": "201",
+          "stopTestOnFail": true,
+          "warningOnly": false
+        }
+      }
+    ]
+  },
+  "test": [
+    {
+      "action": [
+        {
+          "operation": {
+            "extension": [
+              {
+                "url": "http://fyrstain.com/pdt/returnResourceType",
+                "valueString": "Parameters"
+              }
+            ],
+            "id": "TES-01",
+            "type": {
+              "code": "operation",
+              "system": "http://hl7.org/fhir/restful-interaction"
+            },
+            "resource": "Library",
+            "description": "Evaluate the CQL library to retrieve research variables.",
+            "contentType": "application/fhir+json",
+            "encodeRequestUrl": false,
+            "method": "post",
+            "params": "$evaluate",
+            "targetId": "fixture-library-create",
+            "sourceId": "fixture-paramsBundle-create"
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-01",
+            "label": "HTTPStatus",
+            "description": "Confirm that the returned HTTP status is 200.",
+            "direction": "response",
+            "responseCode": "200",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-02",
+            "label": "Resource",
+            "description": "Confirm that the returned resource type is Parameters.",
+            "direction": "response",
+            "resource": "Parameters",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-03",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Parameters resource contains an 'dre' parameter with a value of 1.",
+            "direction": "response",
+            "expression": "Parameters.parameter.where(name = 'dre' ).value=1",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-04",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Parameters resource contains an 'pcaFamilyHistory' parameter with a value of 0.",
+            "direction": "response",
+            "expression": "Parameters.parameter.where(name = 'pcaFamilyHistory' ).value=0",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-05",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Parameters resource contains an 'pirads' parameter with a value of 3.",
+            "direction": "response",
+            "expression": "Parameters.parameter.where(name = 'pirads' ).value=3",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-06",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Parameters resource contains an 'prostateVolume' parameter with a value of 30.",
+            "direction": "response",
+            "expression": "Parameters.parameter.where(name = 'prostateVolume' ).value.value=30",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-07",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Parameters resource contains an 'psa' parameter with a value of 5.",
+            "direction": "response",
+            "expression": "Parameters.parameter.where(name = 'psa' ).value.value=5",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-08",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Parameters resource contains an 'typeOfBiopsy' parameter with a value of 2.",
+            "direction": "response",
+            "expression": "Parameters.parameter.where(name = 'typeOfBiopsy' ).value=2",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        }
+      ],
+      "id": "1-EvaluateLibrary",
+      "name": "Evaluation of CQL Library for Research Variables 2",
+      "description": "This test evaluates the research variables defined in the CQL library for a prostate cancer study."
+    }
+  ],
+  "teardown": {
+    "action": [
+      {
+        "operation": {
+          "id": "TED-01",
+          "type": {
+            "code": "delete",
+            "system": "http://hl7.org/fhir/restful-interaction"
+          },
+          "resource": "Library",
+          "description": "Delete the Library resource on the test server using the id from fixture-library-create.",
+          "encodeRequestUrl": true,
+          "method": "delete",
+          "targetId": "fixture-library-create"
+        }
+      }
+    ]
+  },
+  "version": "1.0",
+  "name": "TestScriptResearchVariables2Extract",
+  "title": "This TestScript is designed to validate the cql library ResearchVariables2",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-06-12",
+  "publisher": "Flute",
+  "purpose": "This TestScript is designed to validate the cql library ResearchVariables2 with an extract of a questionnaire response"
+}
