@@ -10,7 +10,7 @@ Usage: #example
 * extension.valueReference = Reference(Questionnaire-StudyVariable)
 * questionnaire = Canonical(Questionnaire-StudyVariable)
 * status = #in-progress
-* subject = Reference(EXP-S2-Patient)
+* subject = Reference(urn:uuid:b5d7888a-21fe-44bd-b988-a63f34555d2a)
 * item[+].linkId = "procedure-group"
 * item[=].definition = "https://flute.com/StructureDefinition/PR-Biopsy#Procedure"
 
