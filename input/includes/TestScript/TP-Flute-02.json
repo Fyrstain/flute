@@ -1,0 +1,102 @@
+{
+    "resourceType": "TestPlan",
+    "id": "TP-Flute-02",
+    "url": "http://isis.com/test/TestPlan/TP-Flute-01",
+    "title": "TestPlan to evaluate cql libraries for the study variables",
+    "description": "TestPlan to evaluate cql libraries for the study variables for the study variable",
+    "contact": [
+      {
+        "telecom": [
+          {
+            "system": "url",
+            "value": "https://flute.com"
+          }
+        ]
+      }
+    ],
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/testscript-scope-phase-codes",
+            "code": "unit"
+          }
+        ]
+      }
+    ],
+    "scope": [
+      {
+        "reference": "TestScript/TS-Flute-01"
+      },
+      {
+        "reference": "TestScript/TS-Flute-02"
+      },
+      {
+        "reference": "TestScript/TS-Flute-05"
+      }
+    ],
+    "testCase": [
+      {
+        "testRun": [
+          {
+            "script": {
+              "language": {
+                "coding": [
+                  {
+                    "code": "fhir-testscript",
+                    "system": "http://example.com/test-script-languages"
+                  }
+                ]
+              },
+              "sourceReference": {
+                "reference": "TestScript/TS-Flute-01"
+              }
+            },
+            "narrative": "Test case to evaluate included patient"
+          },
+          {
+            "script": {
+              "language": {
+                "coding": [
+                  {
+                    "code": "fhir-testscript",
+                    "system": "http://example.com/test-script-languages"
+                  }
+                ]
+              },
+              "sourceReference": {
+                "reference": "TestScript/TS-Flute-02"
+              }
+            },
+            "narrative": "Test case to evaluate excluded patient"
+          },
+          {
+            "script": {
+              "language": {
+                "coding": [
+                  {
+                    "code": "fhir-testscript",
+                    "system": "http://example.com/test-script-languages"
+                  }
+                ]
+              },
+              "sourceReference": {
+                "reference": "TestScript/TS-Flute-05"
+              }
+            },
+            "narrative": "Test case to evaluate research variables"
+          }
+        ],
+        "sequence": 1
+      }
+    ],
+    "name": "TPEvaluateCQL",
+    "status": "active",
+    "experimental": true,
+    "date": "2024-06-12",
+    "publisher": "Flute",
+    "purpose": "TestPlan to evaluate cql libraries for the study variables for the study variable",
+    "testTools": "The following tool will be used for testing test requirements",
+    "exitCriteria": "The test plan is considered successful if all test cases pass without errors."
+  }
+  
