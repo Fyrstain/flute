@@ -77,6 +77,7 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].code = $sct#399068003
+* item[=].item[=].answerValueSet = Canonical(VS-PCa)
 
 * item[=].item[+].linkId = "family-status"
 * item[=].item[=].definition = "https://flute.com/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory.status"
