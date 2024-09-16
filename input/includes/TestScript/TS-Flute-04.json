@@ -1,0 +1,202 @@
+{
+  "resourceType": "TestScript",
+  "id": "TS-Flute-04",
+  "url": "https://flute.com/TestScript/TS-Flute-04",
+  "description": "This TestScript is designed to validate the extract of a questionnaire response",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://flute.com"
+        }
+      ],
+      "name": "Flute"
+    }
+  ],
+  "origin": [
+    {
+      "index": 1,
+      "profile": {
+        "code": "FHIR-Client",
+        "system": "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"
+      },
+      "url": "http://client-simulator-r4:8080/fhir"
+    }
+  ],
+  "destination": [
+    {
+      "index": 1,
+      "profile": {
+        "code": "FHIR-Server",
+        "system": "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
+      },
+      "url": "https://integ.fyrstain.com/r4/questionnaire-processor/"
+    }
+  ],
+  "fixture": [
+    {
+      "id": "fixture-patient-create",
+      "autocreate": false,
+      "autodelete": false,
+      "resource": {
+        "reference": "EXP-S1-Patient"
+      }
+    },
+    {
+      "id": "fixture-questionnaireResponse-create",
+      "autocreate": false,
+      "autodelete": false,
+      "resource": {
+        "reference": "Questionnaire-StudyVariable-S1"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "Questionnaire-StudyVariable-S1",
+      "name": "Questionnaire-StudyVariable-S1",
+      "path": "id",
+      "defaultValue": "Questionnaire-StudyVariable-S1"
+    }
+  ],
+  "test": [
+    {
+      "action": [
+        {
+          "operation": {
+            "extension": [
+              {
+                "url": "http://fyrstain.com/pdt/returnResourceType",
+                "valueString": "Bundle"
+              }
+            ],
+            "id": "TES-01",
+            "type": {
+              "code": "operation",
+              "system": "http://hl7.org/fhir/restful-interaction"
+            },
+            "resource": "QuestionnaireResponse",
+            "origin": 1,
+            "destination": 1,
+            "method": "post",
+            "description": "Extract questionnaire response to FHIR",
+            "encodeRequestUrl": false,
+            "params": "$extract",
+            "targetId": "Questionnaire-StudyVariable-S1"
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-01",
+            "label": "HTTPStatus",
+            "description": "Confirmer que le statut HTTP renvoyé est 200.",
+            "direction": "response",
+            "responseCode": "200",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-02",
+            "label": "Resource",
+            "description": "Confirmer que le type de ressource renvoyé est Bundle.",
+            "direction": "response",
+            "resource": "Bundle",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-03",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Bundle contains the resource Procedure.",
+            "direction": "response",
+            "expression": "Bundle.entry[0].resource.is(Procedure)",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-04",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Bundle contains the resource FamilyMemberHistory.",
+            "direction": "response",
+            "expression": "Bundle.entry[1].resource.is(FamilyMemberHistory)",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-05",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Bundle contains the resource Observation.",
+            "direction": "response",
+            "expression": "Bundle.entry[2].resource.is(Observation)",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-06",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Bundle contains the resource Procedure.",
+            "direction": "response",
+            "expression": "Bundle.entry[3].resource.is(Procedure)",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-07",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Bundle contains the resource Observation.",
+            "direction": "response",
+            "expression": "Bundle.entry[4].resource.is(Observation)",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-08",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Bundle contains the resource Observation.",
+            "direction": "response",
+            "expression": "Bundle.entry[5].resource.is(Observation)",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "id": "TES-01-ASS-09",
+            "label": "FHIRPath",
+            "description": "Confirm that the returned Bundle contains 6 entries.",
+            "direction": "response",
+            "expression": "Bundle.entry.count() = 6",
+            "stopTestOnFail": true,
+            "warningOnly": false
+          }
+        }
+      ],
+      "id": "01-ExtractQuestionnaireResponse",
+      "name": "Extract questionnaire response to FHIR",
+      "description": "Extract questionnaire response to FHIR"
+    }
+  ],
+  "version": "1.0",
+  "name": "TestScriptExtractQuestionnaireResponse",
+  "title": "This TestScript is designed to validate the extract of a questionnaire response",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-05-31",
+  "publisher": "Flute",
+  "purpose": "This TestScript is designed to validate the extract of a questionnaire response"
+}
