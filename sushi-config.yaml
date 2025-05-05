@@ -3,9 +3,9 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: flute.studyVariables
-canonical: https://flute.com
-name: StudyVariables
+id: hl7.eu.fhir.flute
+canonical: http://hl7.eu/fhir/ig/flute
+name: FluteImplementationGuide
 title: FLUTE Cross-border Prostate Cancer Data Standard Guide
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
@@ -16,14 +16,21 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: Example Publisher
-  url: https://www.hl7.eu
+  - name: Flute Project
+    url: https://www.fluteproject.eu/
+contact:
+  - name: Flute Project
+    telecom:
+      - system: url
+        value: https://www.fluteproject.eu/
   # email: test@example.org
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
+dependencies:
+  hl7.fhir.uv.sdc: 3.0.0
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
@@ -62,9 +69,9 @@ publisher:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
-# parameters:
-#   excludettl: true
-#   validation: [allow-any-extensions, no-broken-links]
+parameters:
+  excludettl: true
+  path-binary: ./input/cql
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
@@ -148,33 +155,36 @@ menu:
 #
 groups:
   LogicalModel:
-    name:  Flute Project Prostate Cancer Models
+    name: Flute Project Prostate Cancer Models
     description: Logical models representing the prostate cancer study variables
     resources:
-      - StructureDefinition/StudyVariables
-     
+      - StructureDefinition/LM-StudyVariables
+      - StructureDefinition/LM-InclusionCriterias
 
-  LogicalModel2FHIR:
-    name:  Flute Project Prostate Cancer study variables Model Mappings
+  LogicalModelMapping:
+    name: Flute Project Prostate Cancer study variables Model Mappings
     description: Model Mapping from the StudyVariables Logical models and this guide
     resources:
-      - ConceptMap/StudyVariables2FHIR
-     
-  patientImplementation:
-    name:  HL7 FHIR Profile implementing the Patient model for Prostate Cancer Study
-    description: HL7 FHIR Profile implementing the Patient model with specific prostate cancer considerations
+      - ConceptMap/CM-StudyVariables2FHIR
+      - ConceptMap/CM-Requirements2StudyVariables
+      - ConceptMap/InclusionCriterias2FHIR
+
+  StudyVariablesGroup:
+    name: Prostate Cancer Study variables
+    description: HL7 FHIR Profiles representing Prostate Cancer Study variables
     resources:
-      - StructureDefinition/DigitalRectalExamination
-      - StructureDefinition/PIRADSScore
-      - StructureDefinition/ProstateSpecificAntigen
-      - StructureDefinition/ProstateVolume
-      - StructureDefinition/BiopsyProcedure
-      
-  FamilyHistoryImplementation:
-    name:  HL7 FHIR Profile implementing the Family History model for Prostate Cancer
-    description: HL7 FHIR Profile implementing the Family History model with focus on prostate cancer
+      - StructureDefinition/PR-DigitalRectalExamination
+      - StructureDefinition/PR-PIRADSScore
+      - StructureDefinition/PR-ProstateSpecificAntigen
+      - StructureDefinition/PR-ProstateVolume
+      - StructureDefinition/PR-Biopsy
+      - StructureDefinition/PR-ProstateCancerFamilyHistory
+
+  OutcomeVariablesGroup:
+    name: Outcome Variable related to Prostate Cancer study
+    description: HL7 FHIR Profiles implementing outcome variable for Prostate Cancer study
     resources:
-      - StructureDefinition/PcaFmilyHistory
+      - StructureDefinition/PR-OutcomeBCN-RC2
 
 #
 #
