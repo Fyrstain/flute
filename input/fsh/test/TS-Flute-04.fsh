@@ -26,17 +26,16 @@ Usage: #definition
 * variable.name = "Questionnaire-StudyVariable-S1"
 * variable.path = "id"
 * variable.defaultValue = "Questionnaire-StudyVariable-S1"
-* test.action[0].operation.extension.url = "http://fyrstain.com/pdt/returnResourceType"
+* test.action[0].operation.extension.url = "http://isis.com/test/StructureDefinition/EXT-ReturnResourceType"
 * test.action[=].operation.extension.valueString = "Bundle"
 * test.action[=].operation.id = "TES-01"
-* test.action[=].operation.type = $restful-interaction#operation
+* test.action[=].operation.type = http://hl7.eu/fhir/ig/flute/CodeSystem/COS-CustomOperations#extract
 * test.action[=].operation.resource = #QuestionnaireResponse
 * test.action[=].operation.origin = 1
 * test.action[=].operation.destination = 1
 * test.action[=].operation.method = #post
 * test.action[=].operation.description = "Extract questionnaire response to FHIR"
 * test.action[=].operation.encodeRequestUrl = false
-* test.action[=].operation.params = "$extract"
 * test.action[=].operation.targetId = "Questionnaire-StudyVariable-S1"
 * test.action[+].assert.id = "TES-01-ASS-01"
 * test.action[=].assert.label = "HTTPStatus"

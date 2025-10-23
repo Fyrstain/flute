@@ -53,7 +53,7 @@ Usage: #inline
 * code = $sct#86273004 "Biopsy"
 * subject = Reference(urn:uuid:b5d7888a-21fe-44bd-b988-a63f34555d2a)
 * performedAge = 54 'a'
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 
 Instance: EXP-S2-FamilyMemberHistory-PCa
 InstanceOf: PR-ProstateCancerFamilyHistory
@@ -83,7 +83,7 @@ Usage: #inline
 * code = $sct#410006001 "DRE - Digital rectal examination"
 * subject = Reference(urn:uuid:b5d7888a-21fe-44bd-b988-a63f34555d2a)
 * performedAge = 54 'a'
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 * outcome = $sct#17621005 "Normal"
 
 Instance: EXP-S2-Observation-PV
@@ -95,7 +95,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:b5d7888a-21fe-44bd-b988-a63f34555d2a)
 * valueQuantity = 30 'cm3'
 * effectiveDateTime = "2024-03-01"
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 
 Instance: EXP-S2-Observation-PIRADS
 InstanceOf: PR-PIRADSScore

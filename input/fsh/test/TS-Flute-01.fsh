@@ -111,15 +111,15 @@ Usage: #definition
 * test.name = "Evaluation of CQL Library for Prostate Cancer Inclusion"
 * test.description = "This test evaluates the inclusion criteria defined in the CQL library for a prostate cancer study."
 * test.action[0].operation.id = "TES-01"
-* test.action[=].operation.extension.url = "http://fyrstain.com/pdt/returnResourceType"
+* test.action[=].operation.extension.url = "http://isis.com/test/StructureDefinition/EXT-ReturnResourceType"
 * test.action[=].operation.extension.valueString = "Parameters"
-* test.action[=].operation.type = $restful-interaction#operation
+* test.action[=].operation.type = http://hl7.eu/fhir/ig/flute/CodeSystem/COS-CustomOperations#evaluate
+// TODO PUT the ?subject={{patientId}} in bodyParameters
 * test.action[=].operation.resource = #Library
 * test.action[=].operation.description = "Evaluate the CQL library to check if the patient meets the inclusion criteria."
 * test.action[=].operation.contentType = #application/fhir+json
 * test.action[=].operation.encodeRequestUrl = false
 * test.action[=].operation.method = #get
-* test.action[=].operation.params = "$evaluate?subject={{patientId}}"
 * test.action[=].operation.targetId = "fixture-library-create"
 * test.action[+].assert.id = "TES-01-ASS-01"
 * test.action[=].assert.label = "HTTPStatus"

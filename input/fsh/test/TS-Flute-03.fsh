@@ -18,17 +18,16 @@ Usage: #definition
 * fixture.autocreate = false
 * fixture.autodelete = false
 * fixture.resource = Reference(DocumentReference/EXP-DR-Questionnaire-StudyVariable)
-* test.action[0].operation.extension.url = "http://fyrstain.com/pdt/returnResourceType"
+* test.action[0].operation.extension.url = "http://isis.com/test/StructureDefinition/EXT-ReturnResourceType"
 * test.action[=].operation.extension.valueString = "QuestionnaireResponse"
 * test.action[=].operation.id = "TES-01"
-* test.action[=].operation.type = $restful-interaction#operation
+* test.action[=].operation.type = http://hl7.eu/fhir/ig/flute/CodeSystem/COS-CustomOperations#populate
 * test.action[=].operation.resource = #Questionnaire
 * test.action[=].operation.origin = 1
 * test.action[=].operation.destination = 1
 * test.action[=].operation.method = #post
 * test.action[=].operation.description = "Populate of questionnaire"
 * test.action[=].operation.encodeRequestUrl = false
-* test.action[=].operation.params = "$populate"
 * test.action[=].operation.sourceId = "fixture-questionnaire-create"
 * test.action[+].assert.id = "TES-01-ASS-01"
 * test.action[=].assert.label = "HTTPStatus"

@@ -52,7 +52,7 @@ Usage: #inline
 * code = $sct#86273004 "Biopsy"
 * subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
 * performedAge = 54 'a'
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 
 
 Instance: EXP-S1-FamilyMemberHistory-PCa
@@ -73,7 +73,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
 * valueQuantity = 5 'ng/mL'
 * effectiveDateTime = "2024-06-03"
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 
 Instance: EXP-S1-Procedure-DRE
 InstanceOf: PR-DigitalRectalExamination
@@ -83,7 +83,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
 * performedAge = 54 'a'
 * outcome = $sct#131196009 "susceptible"
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 
 Instance: EXP-S1-Observation-PV
 InstanceOf: PR-ProstateVolume
@@ -93,7 +93,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
 * valueQuantity = 30 'cm3'
 * effectiveDateTime = "2024-03-01"
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 
 Instance: EXP-S1-Observation-PIRADS
 InstanceOf: PR-PIRADSScore
