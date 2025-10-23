@@ -37,16 +37,15 @@ Usage: #definition
 * setup.action[=].assert.direction = #response
 * setup.action[=].assert.responseCode = "201"
 * setup.action[=].assert.warningOnly = false
-* test.action[0].operation.extension.url = "http://fyrstain.com/pdt/returnResourceType"
+* test.action[0].operation.extension.url = "http://isis.com/test/StructureDefinition/EXT-ReturnResourceType"
 * test.action[=].operation.extension.valueString = "Parameters"
 * test.action[=].operation.id = "TES-01"
-* test.action[=].operation.type = $restful-interaction#operation
+* test.action[=].operation.type = http://hl7.eu/fhir/ig/flute/CodeSystem/COS-CustomOperations#evaluate
 * test.action[=].operation.resource = #Library
 * test.action[=].operation.description = "Evaluate the CQL library to retrieve research variables."
 * test.action[=].operation.contentType = #application/fhir+json
 * test.action[=].operation.encodeRequestUrl = false
 * test.action[=].operation.method = #post
-* test.action[=].operation.params = "$evaluate"
 * test.action[=].operation.targetId = "fixture-library-create"
 * test.action[=].operation.sourceId = "fixture-paramsBundle-create"
 * test.action[+].assert.id = "TES-01-ASS-01"

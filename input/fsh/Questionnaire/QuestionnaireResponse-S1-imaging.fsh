@@ -34,6 +34,7 @@ Usage: #example
 * item[=].item[+].linkId = "age-at-biopsy"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.value"
 * item[=].item[=].text = "Age at biopsy (in years)"
+* item[=].item[=].answer.valueDecimal = 54
 
 * item[=].item[+].linkId = "biopsy"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.code.coding"
@@ -43,7 +44,7 @@ Usage: #example
 * item[=].item[+].linkId = "biopsy-bodySite"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.bodySite.coding"
 * item[=].item[=].text = "Biopsy bodySite"
-* item[=].item[=].answer.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
+* item[=].item[=].answer.valueCoding = $sct#41216001 "Prostate"
 
 * item[+].linkId = "family-history-group"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory"
@@ -102,7 +103,7 @@ Usage: #example
 * item[=].item[+].linkId = "dre-bodySite"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-DigitalRectalExamination#Procedure.bodySite.coding"
 * item[=].item[=].text = "DRE bodySite"
-* item[=].item[=].answer.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
+* item[=].item[=].answer.valueCoding = $sct#41216001 "Prostate"
 
 * item[+].linkId = "observation-prostate-volume-group"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateVolume#Observation"
@@ -125,7 +126,7 @@ Usage: #example
 * item[=].item[+].linkId = "prostate-bodySite"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateVolume#Observation.bodySite.coding"
 * item[=].item[=].text = "Prostate volume bodySite"
-* item[=].item[=].answer.valueCoding = $sct#41216001  "Prostatic structure (body structure)"
+* item[=].item[=].answer.valueCoding = $sct#41216001  "Prostate"
 
 * item[+].linkId = "observation-pirads-group"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-PIRADSScore#Observation"
@@ -133,7 +134,7 @@ Usage: #example
 * item[=].item[+].linkId = "pirads"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-PIRADSScore#Observation.valueCodeableConcept.coding"
 * item[=].item[=].text = "PI-RADS score"
-* item[=].item[=].answer.valueCoding = $pi-rads#3 "Intermediate (the presence of clinically significant cancer is equivocal)"
+* item[=].item[=].answer.valueCoding = $pi-rads#3 "Intermediate"
 
 * item[=].item[+].linkId = "pirads-code"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-PIRADSScore#Observation.code.coding"

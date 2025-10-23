@@ -84,7 +84,7 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
+* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostate"
 
 * item[+].linkId = "family-history-group"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory"
@@ -197,7 +197,7 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
+* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostate"
 
 * item[+].linkId = "observation-prostate-volume-group"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateVolume#Observation"
@@ -241,7 +241,7 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
+* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostate"
 
 * item[+].linkId = "observation-pirads-group"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-PIRADSScore#Observation"
@@ -256,11 +256,11 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].code = $sct#719178004
-* item[=].item[=].answerOption[+].valueCoding = $pi-rads#1 "Very low (clinically significant cancer is highly unlikely to be present)"
-* item[=].item[=].answerOption[+].valueCoding = $pi-rads#2 "Low (clinically significant cancer is unlikely to be present)"
-* item[=].item[=].answerOption[+].valueCoding = $pi-rads#3 "Intermediate (the presence of clinically significant cancer is equivocal)"
-* item[=].item[=].answerOption[+].valueCoding = $pi-rads#4 "High (clinically significant cancer is likely to be present)"
-* item[=].item[=].answerOption[+].valueCoding = $pi-rads#5 "Very high (clinically significant cancer is highly likely to be present)"
+* item[=].item[=].answerOption[+].valueCoding = $pi-rads#1 "Very low"
+* item[=].item[=].answerOption[+].valueCoding = $pi-rads#2 "Low"
+* item[=].item[=].answerOption[+].valueCoding = $pi-rads#3 "Intermediate"
+* item[=].item[=].answerOption[+].valueCoding = $pi-rads#4 "High"
+* item[=].item[=].answerOption[+].valueCoding = $pi-rads#5 "Very high"
 
 
 * item[=].item[+].linkId = "pirads-code"

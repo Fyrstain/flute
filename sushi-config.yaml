@@ -85,6 +85,7 @@ menu:
   Home: index.html
   Artifacts: artifacts.html
   Logical Model: logicalModel.html
+  Imaging Study/DICOM: imagingStudy.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -158,8 +159,8 @@ groups:
     name: Flute Project Prostate Cancer Models
     description: Logical models representing the prostate cancer study variables
     resources:
-      - StructureDefinition/LM-StudyVariables
-      - StructureDefinition/LM-InclusionCriterias
+      - StructureDefinition/StudyVariables
+      - StructureDefinition/InclusionCriterias
 
   LogicalModelMapping:
     name: Flute Project Prostate Cancer study variables Model Mappings

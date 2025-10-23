@@ -17,7 +17,7 @@ Usage: #definition
 * description = "Requirements to Study variables Model Map"
 /* * jurisdiction = $m49.htm#150 "Europe" */
 * purpose = "It shows how the Requirements is mapped into Study variables model"
-* sourceUri = "http://hl7.eu/fhir/ig/flute/ImplementationGuide/flute.requirements"
+* sourceUri = "https://flute.com/ImplementationGuide/flute.requirements"
 * targetUri = Canonical(StudyVariables)
 
 * group[+].element[+].code = #http://hl7.eu/fhir/ig/flute/Requirements/F-PIL-27
