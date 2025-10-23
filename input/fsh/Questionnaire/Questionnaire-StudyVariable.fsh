@@ -1,19 +1,20 @@
 Instance: Questionnaire-StudyVariable
 InstanceOf: sdc-questionnaire-extr-defn
 Usage: #definition
-// // * url = "http://hl7.eu/fhir/ig/flute/fhir/Questionnaire/Questionnaire-StudyVariable"
-* version = "1.0.0"
+* url = Canonical(Questionnaire-StudyVariable)
+* version = "2.0.0"
 * name = "StudyVariableExtraction"
 * title = "Study variable Extraction"
 * status = #active
 * experimental = true
 * subjectType = #Patient
-* date = "2024-03-26"
+* date = "2025-10-22"
 * description = "Study variable extractable questionnaire"
 /* * jurisdiction = $m49.htm#001 "World" */
 
 * item[+].linkId = "procedure-group"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure"
+* item[=].text = "Procedure Biopsy group"
 * item[=].type = #group
 * item[=].required = false
 
@@ -36,13 +37,36 @@ Usage: #definition
 * item[=].item[=].readOnly = true
 * item[=].item[=].initial.valueCoding = $event-status#completed
 
-* item[=].item[+].linkId = "age-at-biopsy"
-* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performed"
-* item[=].item[=].text = "Age at biopsy"
-* item[=].item[=].type = #quantity
+
+* item[=].item[+].linkId = "age-at-biopsy-system"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.system"
+* item[=].item[=].text = "Age at biopsy (system)"
+* item[=].item[=].type = #url
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueUri = "http://unitsofmeasure.org"
+* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+* item[=].item[=].extension.valueBoolean = true
+
+* item[=].item[+].linkId = "age-at-biopsy-code"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.code"
+* item[=].item[=].text = "Age at biopsy (code)"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueString = "a"
+* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+* item[=].item[=].extension.valueBoolean = true
+
+* item[=].item[+].linkId = "age-at-biopsy"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.value"
 * item[=].item[=].code = $sct#86273004
+* item[=].item[=].text = "Age at biopsy (in years)"
+* item[=].item[=].type = #decimal
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
 
 * item[=].item[+].linkId = "biopsy"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.code.coding"
@@ -64,6 +88,7 @@ Usage: #definition
 
 * item[+].linkId = "family-history-group"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory"
+* item[=].text = "Family history group"
 * item[=].type = #group
 * item[=].required = false
 * item[=].code = $sct#399068003
@@ -256,3 +281,99 @@ Usage: #definition
 * item[=].item[=].code = $sct#719178004
 * item[=].item[=].readOnly = true
 * item[=].item[=].initial.valueCoding = http://hl7.org/fhir/observation-status#final
+
+
+* item[+].linkId = "imaging-group"
+* item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy"
+* item[=].text = "Imaging Study group"
+* item[=].type = #group
+* item[=].required = false
+
+* item[=].item[+].linkId = "study-id-system"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.identifier[+].system"
+* item[=].item[=].text = "Study ID System"
+* item[=].item[=].type = #url
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+
+* item[=].item[+].linkId = "study-id-value"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.identifier[=].value"
+* item[=].item[=].text = "Study ID value"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+
+* item[=].item[+].linkId = "imagingstudy-status"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.status"
+* item[=].item[=].text = "Study Status"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+* item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/imagingstudy-status"
+* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/imagingstudy-status#available
+
+* item[=].item[+].linkId = "imagingstudy-started"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.started"
+* item[=].item[=].text = "Study Started DateTime"
+* item[=].item[=].type = #dateTime
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+
+* item[=].item[+].linkId = "imagingstudy-endpoint"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.endpoint[+].display"
+* item[=].item[=].text = "Study DICOM URL Endpoint"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
+* item[=].item[=].repeats = false
+
+* item[=].item[+].linkId = "imaging-series-group"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series"
+* item[=].item[=].text = "Imaging Study Series group"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "imagingstudy-series-uid"
+* item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[+].uid"
+* item[=].item[=].item[=].text = "Study Series UID"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = false
+
+* item[=].item[=].item[+].linkId = "imagingstudy-series-modality"
+* item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].modality"
+* item[=].item[=].item[=].text = "Study Series Modality"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].answerValueSet = "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
+
+
+* item[=].item[=].item[+].linkId = "imaging-instance-group"
+* item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.instance"
+* item[=].item[=].item[=].text = "Imaging Study Instance group"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-uid"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[+].uid"
+* item[=].item[=].item[=].item[=].text = "Study instance UID"
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].repeats = false
+
+* item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-class"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[=].sopClass"
+* item[=].item[=].item[=].item[=].text = "Study instance SOP Class"
+* item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].answerValueSet = "http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1"
+
+* item[=].item[+].linkId = "imagingstudy-note"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.note[+].text"
+* item[=].item[=].text = "Any metadata relevant to filter the dataset before ML training"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[=].repeats = false
