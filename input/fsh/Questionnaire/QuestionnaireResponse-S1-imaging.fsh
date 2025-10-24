@@ -5,7 +5,7 @@ Usage: #example
 //* contained = Questionnaire-StudyVariable
 /* * extension.url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-questionnaire"
 * extension.valueReference = Reference(Questionnaire-StudyVariable) */
-* questionnaire = Canonical(Questionnaire-StudyVariableV2)
+* questionnaire = Canonical(Questionnaire-StudyVariable)
 * status = #in-progress
 * subject = Reference(urn:uuid:b5d7888a-21fe-44bd-b988-a63f34555d2a)
 * item[+].linkId = "procedure-group"
