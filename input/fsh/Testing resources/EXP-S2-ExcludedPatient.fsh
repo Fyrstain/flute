@@ -52,7 +52,7 @@ Usage: #inline
 * category = $sct#884001 "Initial"
 * code = $sct#86273004 "Biopsy"
 * subject = Reference(urn:uuid:b5d7888a-21fe-44bd-b988-a63f34555d2a)
-* performedAge = 54 'a'
+* performedDateTime = "2024-06-10"
 * bodySite = $sct#41216001 "Prostate"
 
 Instance: EXP-S2-FamilyMemberHistory-PCa

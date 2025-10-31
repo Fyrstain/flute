@@ -73,6 +73,10 @@ dependencies:
 parameters:
   excludettl: true
   path-binary: ./input/cql
+  special-url:
+    - https://flute.com/Library/InclusionCriteriaFLUTE
+    - https://flute.com/Library/ResearchVariablesFLUTE
+
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
