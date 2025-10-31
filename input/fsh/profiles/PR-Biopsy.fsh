@@ -10,5 +10,5 @@ Description: "This profile represents the biopsy procedure performed on a patien
 * subject 1..
 * subject only Reference(Patient)
 * performed[x] 1..
-* performedAge 1..
+* performedDateTime 1..
 * bodySite.coding = $sct#41216001 "Prostate"

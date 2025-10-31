@@ -21,20 +21,25 @@ Usage: #example
 * item[=].item[=].text = "Status"
 * item[=].item[=].answer.valueCoding = $event-status#completed
 
-* item[=].item[+].linkId = "age-at-biopsy-system"
-* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.system"
-* item[=].item[=].text = "Age at biopsy (system)"
-* item[=].item[=].answer.valueUri = "http://unitsofmeasure.org"
+// * item[=].item[+].linkId = "age-at-biopsy-system"
+// * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.system"
+// * item[=].item[=].text = "Age at biopsy (system)"
+// * item[=].item[=].answer.valueUri = "http://unitsofmeasure.org"
 
-* item[=].item[+].linkId = "age-at-biopsy-code"
-* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.code"
-* item[=].item[=].text = "Age at biopsy (code)"
-* item[=].item[=].answer.valueString = "a"
+// * item[=].item[+].linkId = "age-at-biopsy-code"
+// * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.code"
+// * item[=].item[=].text = "Age at biopsy (code)"
+// * item[=].item[=].answer.valueString = "a"
 
-* item[=].item[+].linkId = "age-at-biopsy"
-* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.value"
-* item[=].item[=].text = "Age at biopsy (in years)"
-* item[=].item[=].answer.valueDecimal = 54
+// * item[=].item[+].linkId = "age-at-biopsy"
+// * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.value"
+// * item[=].item[=].text = "Age at biopsy (in years)"
+// * item[=].item[=].answer.valueDecimal = 54
+
+* item[=].item[+].linkId = "biopsy-date"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedDateTime"
+* item[=].item[=].text = "Date when the biopsy was performed"
+* item[=].item[=].answer.valueDateTime = "2024-02-10T12:12:00Z"
 
 * item[=].item[+].linkId = "biopsy"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.code.coding"
