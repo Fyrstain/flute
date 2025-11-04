@@ -1,6 +1,3 @@
-Alias: $testscript-scope-phase-codes = http://hl7.org/fhir/testscript-scope-phase-codes
-Alias: $test-script-languages = http://example.com/test-script-languages
-
 Instance: TP-Flute-01
 InstanceOf: TestPlan
 Usage: #definition

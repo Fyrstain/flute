@@ -32,11 +32,17 @@ Usage: #example
 * entry[=].resource = EXP-S1-Observation-PIRADS
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
+* entry[+].fullUrl = "urn:uuid:80488242-2f56-4c3d-b55e-281bca3ac025"
+* entry[=].resource = EXP-S1-ImagingStudy
+* entry[=].request.method = #POST
+* entry[=].request.url = "ImagingStudy"
 
 Instance: EXP-S1-Patient
 InstanceOf: Patient
 Description: "The Patient included in the study S1."
 Usage: #example
+* identifier[+].system = "http://hospital.example.org/patients"
+* identifier[=].value = "EXP-S1-Patient"
 * active = true
 * name.use = #official
 * name.family = "Dubois"
@@ -51,8 +57,8 @@ Usage: #inline
 * category = $sct#27582007 "Repeated"
 * code = $sct#86273004 "Biopsy"
 * subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
-* performedAge = 54 'a'
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* performedDateTime = "2024-06-10"
+* bodySite = $sct#41216001 "Prostate"
 
 
 Instance: EXP-S1-FamilyMemberHistory-PCa
@@ -73,7 +79,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
 * valueQuantity = 5 'ng/mL'
 * effectiveDateTime = "2024-06-03"
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 
 Instance: EXP-S1-Procedure-DRE
 InstanceOf: PR-DigitalRectalExamination
@@ -83,7 +89,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
 * performedAge = 54 'a'
 * outcome = $sct#131196009 "susceptible"
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 
 Instance: EXP-S1-Observation-PV
 InstanceOf: PR-ProstateVolume
@@ -93,7 +99,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
 * valueQuantity = 30 'cm3'
 * effectiveDateTime = "2024-03-01"
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 
 Instance: EXP-S1-Observation-PIRADS
 InstanceOf: PR-PIRADSScore
@@ -103,3 +109,30 @@ Usage: #inline
 * subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
 * valueInteger = 3
 * effectiveDateTime = "2024-03-01"
+
+Instance: EXP-S1-ImagingStudy
+InstanceOf: imagingStudy-eu-flute
+Usage: #inline
+* identifier
+  * system = "http://hospital.example.org/imaging/studies"
+  * value = "STUDY-12345"
+* status = #available
+* subject = Reference(urn:uuid:8a80b7e2-1879-418e-92eb-3641846b599c)
+* started = "2025-08-15T10:30:00Z"
+* endpoint.display = "http://dicomserver.example.org"
+* note.text = "No artifacts present"
+* series[+]
+  * uid = "1.2.840.113619.2.55.3.604688437.783.1599767052.467"
+  * modality = $DCM#CT
+  * instance
+    * uid = "1.2.840.113619.2.55.3.604688437.783.1599767052.468"
+    * sopClass = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.2
+* series[+]
+  * uid = "1.2.840.113619.2.55.3.604688437.783.1599767052.469"
+  * modality = $DCM#CT
+  * instance[+]
+    * uid = "1.2.840.113619.2.55.3.604688437.783.1599767052.470"
+    * sopClass = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.2
+  * instance[+]
+    * uid = "1.2.840.113619.2.55.3.604688437.783.1599767052.471"
+    * sopClass = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.3

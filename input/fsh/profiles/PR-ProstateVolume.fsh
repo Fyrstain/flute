@@ -5,7 +5,7 @@ Title: "Observation: prostate volume"
 Description: "Observation for measuring the volume of the prostate."
 * code = $sct#1297142007 "Volume of prostate"
 * subject 1.. 
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 * subject only Reference(Patient)
 * valueQuantity 1..1
 * valueQuantity.value 1..1 

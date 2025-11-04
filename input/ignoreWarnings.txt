@@ -7,5 +7,116 @@
 # best practice not applicable for this profile
 Best Practice Recommendation: In general, all observations should have a performer
 
-# warning with ConceptMap
-The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
+# URL not used in the profile of ImagingStudy
+A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
+A definition could not be found for Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1'
+
+# Hyperlink not resolve in the questionnaire definition but path is correct
+Hyperlink 'StructureDefinition-PR-Biopsy.html#Procedure.status' at 'div/table/tr/td/a' for 'Procedure.status' does not resolve
+Hyperlink 'StructureDefinition-PR-Biopsy.html#Procedure.code.coding' at 'div/table/tr/td/a' for 'Procedure.code.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-ProstateCancerFamilyHistory.html#FamilyMemberHistory.status' at 'div/table/tr/td/a' for 'FamilyMemberHistory.status' does not resolve
+Hyperlink 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.value' at 'div/table/tr/td/a' for 'Observation.value' does not resolve
+Hyperlink 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.status' at 'div/table/tr/td/a' for 'Observation.status' does not resolve
+Hyperlink 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.outcome.coding' at 'div/table/tr/td/a' for 'Procedure.outcome.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.code.coding' at 'div/table/tr/td/a' for 'Procedure.code.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.status' at 'div/table/tr/td/a' for 'Procedure.status' does not resolve
+Hyperlink 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.bodySite.coding' at 'div/table/tr/td/a' for 'Procedure.bodySite.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-ProstateVolume.html#Observation.value' at 'div/table/tr/td/a' for 'Observation.value' does not resolve
+Hyperlink 'StructureDefinition-PR-ProstateVolume.html#Observation.code.coding' at 'div/table/tr/td/a' for 'Observation.code.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-ProstateVolume.html#Observation.status' at 'div/table/tr/td/a' for 'Observation.status' does not resolve
+Hyperlink 'StructureDefinition-PR-ProstateVolume.html#Observation.bodySite.coding' at 'div/table/tr/td/a' for 'Observation.bodySite.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-PIRADSScore.html#Observation.valueCodeableConcept.coding' at 'div/table/tr/td/a' for 'Observation.valueCodeableConcept.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-PIRADSScore.html#Observation.code.coding' at 'div/table/tr/td/a' for 'Observation.code.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-PIRADSScore.html#Observation.status' at 'div/table/tr/td/a' for 'Observation.status' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.identifier.system' at 'div/table/tr/td/a' for 'ImagingStudy.identifier.system' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.identifier.value' at 'div/table/tr/td/a' for 'ImagingStudy.identifier.value' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.endpoint.display' at 'div/table/tr/td/a' for 'ImagingStudy.endpoint.display' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].uid' at 'div/table/tr/td/a' for 'ImagingStudy.series[0].uid' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].modality' at 'div/table/tr/td/a' for 'ImagingStudy.series[0].modality' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].instance[0].uid' at 'div/table/tr/td/a' for 'ImagingStudy.series[0].instance[0].uid' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].instance[0].sopClass' at 'div/table/tr/td/a' for 'ImagingStudy.series[0].instance[0].sopClass' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.note.text' at 'div/table/tr/td/a' for 'ImagingStudy.note.text' does not resolve
+The link 'StructureDefinition-PR-Biopsy.html#Procedure.status' for "Procedure.status" cannot be resolved (valid targets: 337 targets)
+The link 'StructureDefinition-PR-Biopsy.html#Procedure.code.coding' for "Procedure.code.coding" cannot be resolved (valid targets: 337 targets)
+The link 'StructureDefinition-PR-ProstateCancerFamilyHistory.html#FamilyMemberHistory.status' for "FamilyMemberHistory.status" cannot be resolved (valid targets: 267 targets)
+The link 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.value' for "Observation.value" cannot be resolved (valid targets: 368 targets)
+The link 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.status' for "Observation.status" cannot be resolved (valid targets: 368 targets)
+The link 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.outcome.coding' for "Procedure.outcome.coding" cannot be resolved (valid targets: 316 targets)
+The link 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.code.coding' for "Procedure.code.coding" cannot be resolved (valid targets: 316 targets)
+The link 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.status' for "Procedure.status" cannot be resolved (valid targets: 316 targets)
+The link 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.bodySite.coding' for "Procedure.bodySite.coding" cannot be resolved (valid targets: 316 targets)
+The link 'StructureDefinition-PR-ProstateVolume.html#Observation.value' for "Observation.value" cannot be resolved (valid targets: 389 targets)
+The link 'StructureDefinition-PR-ProstateVolume.html#Observation.code.coding' for "Observation.code.coding" cannot be resolved (valid targets: 389 targets)
+The link 'StructureDefinition-PR-ProstateVolume.html#Observation.status' for "Observation.status" cannot be resolved (valid targets: 389 targets)
+The link 'StructureDefinition-PR-ProstateVolume.html#Observation.bodySite.coding' for "Observation.bodySite.coding" cannot be resolved (valid targets: 389 targets)
+The link 'StructureDefinition-PR-PIRADSScore.html#Observation.valueCodeableConcept.coding' for "Observation.valueCodeableConcept.coding" cannot be resolved (valid targets: 311 targets)
+The link 'StructureDefinition-PR-PIRADSScore.html#Observation.code.coding' for "Observation.code.coding" cannot be resolved (valid targets: 311 targets)
+The link 'StructureDefinition-PR-PIRADSScore.html#Observation.status' for "Observation.status" cannot be resolved (valid targets: 311 targets)
+The link 'StructureDefinition-PR-Biopsy.html#Procedure.performedDateTime' for "Procedure.performedDateTime" cannot be resolved (valid targets: 337 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.identifier.system' for "ImagingStudy.identifier.system" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.identifier.value' for "ImagingStudy.identifier.value" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.endpoint.display' for "ImagingStudy.endpoint.display" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].uid' for "ImagingStudy.series[0].uid" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].modality' for "ImagingStudy.series[0].modality" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].instance[0].uid' for "ImagingStudy.series[0].instance[0].uid" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].instance[0].sopClass' for "ImagingStudy.series[0].instance[0].sopClass" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.note.text' for "ImagingStudy.note.text" cannot be resolved (valid targets: 357 targets)
+
+# JSON resources that are in the inlcudes folder
+The link 'DocumentReference/EXP-S1-IncludedPatient' for "DocumentReference/EXP-S1-IncludedPatient" cannot be resolved
+The link 'DocumentReference/EXP-Teardown' for "DocumentReference/EXP-Teardown" cannot be resolved
+The link 'DocumentReference/VS-PCa' for "DocumentReference/VS-PCa" cannot be resolved
+The link 'DocumentReference/PcaInclusionCriteria' for "DocumentReference/PcaInclusionCriteria" cannot be resolved
+The link 'DocumentReference/EXP-S2-ExcludedPatient' for "DocumentReference/EXP-S2-ExcludedPatient" cannot be resolved
+The link 'DocumentReference/EXP-DR-Questionnaire-StudyVariable' for "DocumentReference/EXP-DR-Questionnaire-StudyVariable" cannot be resolved
+The link 'DocumentReference/EXP-Params-BundleExtract' for "DocumentReference/EXP-Params-BundleExtract" cannot be resolved
+The link 'DocumentReference/ResearchVariables2' for "DocumentReference/ResearchVariables2" cannot be resolved
+Unable to resolve resource with reference 'DocumentReference/EXP-S1-IncludedPatient'
+Unable to resolve resource with reference 'DocumentReference/EXP-Teardown'
+Unable to resolve resource with reference 'DocumentReference/VS-PCa'
+Unable to resolve resource with reference 'DocumentReference/PcaInclusionCriteria'
+Unable to resolve resource with reference 'DocumentReference/EXP-S2-ExcludedPatient'
+Unable to resolve resource with reference 'DocumentReference/EXP-DR-Questionnaire-StudyVariable'
+Unable to resolve resource with reference 'DocumentReference/EXP-Params-BundleExtract'
+Unable to resolve resource with reference 'DocumentReference/ResearchVariables2'
+Hyperlink 'DocumentReference/EXP-S1-IncludedPatient' at 'div/blockquote/p/a' for 'DocumentReference/EXP-S1-IncludedPatient' does not resolve
+Hyperlink 'DocumentReference/EXP-Teardown' at 'div/blockquote/p/a' for 'DocumentReference/EXP-Teardown' does not resolve
+Hyperlink 'DocumentReference/VS-PCa' at 'div/blockquote/p/a' for 'DocumentReference/VS-PCa' does not resolve
+Hyperlink 'DocumentReference/PcaInclusionCriteria' at 'div/blockquote/p/a' for 'DocumentReference/PcaInclusionCriteria' does not resolve
+Hyperlink 'DocumentReference/EXP-S2-ExcludedPatient' at 'div/blockquote/p/a' for 'DocumentReference/EXP-S2-ExcludedPatient' does not resolve
+Hyperlink 'DocumentReference/EXP-DR-Questionnaire-StudyVariable' at 'div/blockquote/p/a' for 'DocumentReference/EXP-DR-Questionnaire-StudyVariable' does not resolve
+Hyperlink 'DocumentReference/EXP-Params-BundleExtract' at 'div/blockquote/p/a' for 'DocumentReference/EXP-Params-BundleExtract' does not resolve
+Hyperlink 'DocumentReference/ResearchVariables2' at 'div/blockquote/p/a' for 'DocumentReference/ResearchVariables2' does not resolve
+
+# Resource is available in the IG 
+Unable to find artifact TestScript/TS-Flute-03 nominated as the artifact for test resource /TestPlan/TP-Flute-01
+Unable to find artifact TestScript/TS-Flute-04 nominated as the artifact for test resource /TestPlan/TP-Flute-01
+
+# Use of StructureDefinition instead of CodeSystem for source and target in ConceptMap
+No definition could be found for URL value 'http://hl7.org/fhir/R4'
+Reference must be to a ValueSet, but found a StructureDefinition instead
+
+# Name conflict, the CQL code remains correct
+An operand identifier reference is hiding another identifier of the same name.
+
+# CQL expression - functionally correct in our implementation despite validator limitations
+Result type List of choice<FHIR.Quantity,FHIR.CodeableConcept,FHIR.string,FHIR.boolean,FHIR.integer,FHIR.Range,FHIR.Ratio,FHIR.SampledData,FHIR.time,FHIR.dateTime,FHIR.Period> of definition psa is not supported; implementations may not be able to use the result of this expression
+Result type List of choice<FHIR.Quantity,FHIR.CodeableConcept,FHIR.string,FHIR.boolean,FHIR.integer,FHIR.Range,FHIR.Ratio,FHIR.SampledData,FHIR.time,FHIR.dateTime,FHIR.Period> of definition prostateVolume is not supported; implementations may not be able to use the result of this expression
+Result type List of choice<FHIR.Quantity,FHIR.CodeableConcept,FHIR.string,FHIR.boolean,FHIR.integer,FHIR.Range,FHIR.Ratio,FHIR.SampledData,FHIR.time,FHIR.dateTime,FHIR.Period> of definition pirads is not supported; implementations may not be able to use the result of this expression
+
+# ValueSet proposed in ImagingStudy specification
+ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' not found
+
+# Link to the Flute requirements IG
+No definition could be found for URL value 'https://flute.com/ImplementationGuide/flute.requirements'
+
+# Dependency with TestScript ISIS Test IG profile
+The extension http://isis.com/test/StructureDefinition/EXT-ReturnResourceType could not be found so is not allowed here
+No definition could be found for URL value 'http://isis.com/test/StructureDefinition/EXT-ReturnResourceType'
+
+# Use example CodeSystem for TestPlan
+A definition for CodeSystem 'http://example.com/test-script-languages' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://example.com/testscript-scope-phase-codes' could not be found, so the code cannot be validated
+
+# See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Issue.20using.20version-specific.20packages
+The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')

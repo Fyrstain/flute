@@ -1,4 +1,4 @@
-Instance: Questionnaire-StudyVariable-S1
+Instance: Questionnaire-StudyVariable-S1-imaging
 InstanceOf: QuestionnaireResponse
 Description: "The Questionnaire response for the Patient included S1."
 Usage: #example
@@ -150,3 +150,103 @@ Usage: #example
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-PIRADSScore#Observation.status"
 * item[=].item[=].text = "PI-RADS Status"
 * item[=].item[=].answer.valueCoding = $observation-status#final
+
+* item[+].linkId = "g-imag"
+* item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy"
+* item[=].text = "Imaging Study group"
+* item[=].item[+].linkId = "study-id-system"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.identifier.system"
+* item[=].item[=].text = "Study ID System"
+* item[=].item[=].answer.valueUri = "http://hospital.example.org/imaging/studies"
+
+* item[=].item[+].linkId = "study-id-value"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.identifier.value"
+* item[=].item[=].text = "Study ID value"
+* item[=].item[=].answer.valueString = "STUDY-12345"
+
+* item[=].item[+].linkId = "imagingstudy-status"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.status"
+* item[=].item[=].text = "Study Status"
+* item[=].item[=].answer.valueCoding = $imagingstudy-status#available
+
+* item[=].item[+].linkId = "imagingstudy-started"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.started"
+* item[=].item[=].text = "Study Started DateTime"
+* item[=].item[=].answer.valueDateTime = "2023-08-15T10:30:00Z"
+
+* item[=].item[+].linkId = "imagingstudy-endpoint"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.endpoint.display"
+* item[=].item[=].text = "Study DICOM URL Endpoint"
+* item[=].item[=].answer.valueString = "http://dicomserver.example.org"
+
+// * item[=].item[+].linkId = "imaging-series-group"
+// * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series"
+// * item[=].item[=].text = "Imaging Study Series group"
+* item[=].item[+].linkId = "imagingstudy-series-uid"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[0].uid"
+* item[=].item[=].text = "Study Series UID"
+* item[=].item[=].answer.valueString = "1.2.840.113619.2.55.3.604688437.783.1599767052.467"
+
+* item[=].item[+].linkId = "imagingstudy-series-modality"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[0].modality"
+* item[=].item[=].text = "Study Series Modality"
+* item[=].item[=].answer.valueCoding = http://dicom.nema.org/resources/ontology/DCM#CT
+
+// * item[=].item[=].item[+].linkId = "imaging-instance-group"
+// * item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.instance"
+// * item[=].item[=].item[=].text = "Imaging Study Instance group"
+* item[=].item[+].linkId = "imagingstudy-instance-uid"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[0].instance[0].uid"
+* item[=].item[=].text = "Study instance UID"
+* item[=].item[=].answer.valueString = "1.2.840.113619.2.55.3.604688437.783.1599767052.468"
+
+* item[=].item[+].linkId = "imagingstudy-instance-class"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[0].instance[0].sopClass"
+* item[=].item[=].text = "Study instance SOP Class"
+* item[=].item[=].answer.valueCoding = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.2
+
+// // Other series
+// * item[=].item[+].linkId = "imaging-series-group"
+// * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series"
+// * item[=].item[=].text = "Imaging Study Series group"
+// * item[=].item[=].item[+].linkId = "imagingstudy-series-uid"
+// * item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[+].uid"
+// * item[=].item[=].item[=].text = "Study Series UID"
+// * item[=].item[=].item[=].answer.valueString = "1.2.840.113619.2.55.3.604688437.783.1599767052.469"
+
+// * item[=].item[=].item[+].linkId = "imagingstudy-series-modality"
+// * item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].modality"
+// * item[=].item[=].item[=].text = "Study Series Modality"
+// * item[=].item[=].item[=].answer.valueCoding = http://dicom.nema.org/resources/ontology/DCM#CT
+
+// * item[=].item[=].item[+].linkId = "imaging-instance-group"
+// * item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.instance"
+// * item[=].item[=].item[=].text = "Imaging Study Instance group"
+// * item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-uid"
+// * item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[+].uid"
+// * item[=].item[=].item[=].item[=].text = "Study instance UID"
+// * item[=].item[=].item[=].item[=].answer.valueString = "1.2.840.113619.2.55.3.604688437.783.1599767052.470"
+
+// * item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-class"
+// * item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[=].sopClass"
+// * item[=].item[=].item[=].item[=].text = "Study instance SOP Class"
+// * item[=].item[=].item[=].item[=].answer.valueCoding = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.2
+
+// // Another instance
+// * item[=].item[=].item[+].linkId = "imaging-instance-group"
+// * item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.instance"
+// * item[=].item[=].item[=].text = "Imaging Study Instance group"
+// * item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-uid"
+// * item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[+].uid"
+// * item[=].item[=].item[=].item[=].text = "Study instance UID"
+// * item[=].item[=].item[=].item[=].answer.valueString = "1.2.840.113619.2.55.3.604688437.783.1599767052.471"
+
+// * item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-class"
+// * item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[=].sopClass"
+// * item[=].item[=].item[=].item[=].text = "Study instance SOP Class"
+// * item[=].item[=].item[=].item[=].answer.valueCoding = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.3.1
+
+* item[=].item[+].linkId = "imagingstudy-note"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.note.text"
+* item[=].item[=].text = "Any metadata relevant to filter the dataset before ML training"
+* item[=].item[=].answer.valueString = "No artifacts present"
