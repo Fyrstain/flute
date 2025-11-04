@@ -6,6 +6,6 @@ Description: "This profile represents the digital rectal examination (DRE) proce
 * code = $sct#410006001 "DRE - Digital rectal examination"
 * subject 1..
 * subject only Reference(Patient)
-* bodySite = $sct#41216001 "Prostatic structure (body structure)"
+* bodySite = $sct#41216001 "Prostate"
 * outcome 1.. 
 * outcome from VS-DREOutcomeCode (required)

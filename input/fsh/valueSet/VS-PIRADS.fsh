@@ -4,8 +4,8 @@ Title: "Prostate Imaging – Reporting and Data System"
 Description: "Prostate Imaging – Reporting andData System (R)"
 
 * ^experimental = false
-* $pi-rads#1 "Very low (clinically significant cancer is highly unlikely to be present)"
-* $pi-rads#2 "Low (clinically significant cancer is unlikely to be present)"
-* $pi-rads#3 "Intermediate (the presence of clinically significant cancer is equivocal)"
-* $pi-rads#4 "High (clinically significant cancer is likely to be present)"
-* $pi-rads#5 "Very high (clinically significant cancer is highly likely to be present)"
+* $pi-rads#1 "Very low"
+* $pi-rads#2 "Low"
+* $pi-rads#3 "Intermediate"
+* $pi-rads#4 "High"
+* $pi-rads#5 "Very high"

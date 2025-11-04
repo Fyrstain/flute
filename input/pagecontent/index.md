@@ -26,6 +26,10 @@ The FLUTE project aims to facilitate the sharing and reuse of health data among 
 
 {% include globals-table.xhtml %}
 
+## IP Statements
+
+{% include ip-statements.xhtml %}
+
 ### Authors and Contributors
 
 <table>

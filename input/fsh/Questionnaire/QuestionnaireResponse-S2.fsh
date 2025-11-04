@@ -8,7 +8,7 @@ Usage: #example
 * questionnaire = Canonical(Questionnaire-StudyVariable)
 * status = #in-progress
 * subject = Reference(urn:uuid:b5d7888a-21fe-44bd-b988-a63f34555d2a)
-* item[+].linkId = "procedure-group"
+* item[+].linkId = "g-proc"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure"
 
 * item[=].item[+].linkId = "type-of-biopsy"
@@ -21,10 +21,25 @@ Usage: #example
 * item[=].item[=].text = "Status"
 * item[=].item[=].answer.valueCoding = $event-status#completed
 
-* item[=].item[+].linkId = "age-at-biopsy"
-* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performed"
-* item[=].item[=].text = "Age at biopsy"
-* item[=].item[=].answer.valueQuantity = 54 'a'
+// * item[=].item[+].linkId = "age-at-biopsy-system"
+// * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.system"
+// * item[=].item[=].text = "Age at biopsy (system)"
+// * item[=].item[=].answer.valueUri = "http://unitsofmeasure.org"
+
+// * item[=].item[+].linkId = "age-at-biopsy-code"
+// * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.code"
+// * item[=].item[=].text = "Age at biopsy (code)"
+// * item[=].item[=].answer.valueString = "a"
+
+// * item[=].item[+].linkId = "age-at-biopsy"
+// * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedAge.value"
+// * item[=].item[=].text = "Age at biopsy (in years)"
+// * item[=].item[=].answer.valueDecimal = 54
+
+* item[=].item[+].linkId = "biopsy-date"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.performedDateTime"
+* item[=].item[=].text = "Date when the biopsy was performed"
+* item[=].item[=].answer.valueDateTime = "2024-02-10T12:12:00Z"
 
 * item[=].item[+].linkId = "biopsy"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.code.coding"
@@ -34,9 +49,9 @@ Usage: #example
 * item[=].item[+].linkId = "biopsy-bodySite"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure.bodySite.coding"
 * item[=].item[=].text = "Biopsy bodySite"
-* item[=].item[=].answer.valueCoding = $sct#41216001  "Prostatic structure (body structure)"
+* item[=].item[=].answer.valueCoding = $sct#41216001  "Prostate"
 
-* item[+].linkId = "family-history-group"
+* item[+].linkId = "g-fam-hist"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory"
 * item[=].item[+].linkId = "family-history-pca"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory.condition.code.coding"
@@ -54,7 +69,7 @@ Usage: #example
 // * item[=].item[=].answer.valueCoding = $v3-RoleCode#FTH
 * item[=].item[=].answer.valueCoding = $v3-RoleCode#FAMMEMB // Fixed in the questionnaire
 
-* item[+].linkId = "observation-psa-group"
+* item[+].linkId = "g-obs-psa"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateSpecificAntigen#Observation"
 * item[=].text = "Observation PSA group"
 * item[=].item[+].linkId = "psa"
@@ -72,7 +87,7 @@ Usage: #example
 * item[=].item[=].text = "PSA Status"
 * item[=].item[=].answer.valueCoding = $observation-status#final
 
-* item[+].linkId = "procedure-dre-group"
+* item[+].linkId = "g-proc-dre"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-DigitalRectalExamination#Procedure"
 * item[=].text = "Procedure DRE group"
 * item[=].item[+].linkId = "dre"
@@ -93,9 +108,9 @@ Usage: #example
 * item[=].item[+].linkId = "dre-bodySite"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-DigitalRectalExamination#Procedure.bodySite.coding"
 * item[=].item[=].text = "DRE bodySite"
-* item[=].item[=].answer.valueCoding = $sct#41216001  "Prostatic structure (body structure)"
+* item[=].item[=].answer.valueCoding = $sct#41216001  "Prostate"
 
-* item[+].linkId = "observation-prostate-volume-group"
+* item[+].linkId = "g-obs-prost-vol"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateVolume#Observation"
 * item[=].text = "Observation Prostate Volume group"
 * item[=].item[+].linkId = "prostate-volume"
@@ -116,15 +131,15 @@ Usage: #example
 * item[=].item[+].linkId = "prostate-bodySite"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateVolume#Observation.bodySite.coding"
 * item[=].item[=].text = "Prostate volume bodySite"
-* item[=].item[=].answer.valueCoding = $sct#41216001  "Prostatic structure (body structure)"
+* item[=].item[=].answer.valueCoding = $sct#41216001  "Prostate"
 
-* item[+].linkId = "observation-pirads-group"
+* item[+].linkId = "g-obs-pirads"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-PIRADSScore#Observation"
 * item[=].text = "Observation PI-RADS group"
 * item[=].item[+].linkId = "pirads"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-PIRADSScore#Observation.valueCodeableConcept.coding"
 * item[=].item[=].text = "PI-RADS score"
-* item[=].item[=].answer.valueCoding = $pi-rads#3 "Intermediate (the presence of clinically significant cancer is equivocal)"
+* item[=].item[=].answer.valueCoding = $pi-rads#3 "Intermediate"
 
 * item[=].item[+].linkId = "pirads-code"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-PIRADSScore#Observation.code.coding"
