@@ -31,6 +31,7 @@ contact:
 #
 dependencies:
   hl7.fhir.uv.sdc: 3.0.0
+  fhir.dicom: 2025.3.20250714
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
@@ -72,6 +73,10 @@ dependencies:
 parameters:
   excludettl: true
   path-binary: ./input/cql
+  special-url:
+    - https://flute.com/Library/InclusionCriteriaFLUTE
+    - https://flute.com/Library/ResearchVariablesFLUTE
+
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
@@ -85,6 +90,7 @@ menu:
   Home: index.html
   Artifacts: artifacts.html
   Logical Model: logicalModel.html
+  Imaging Study/DICOM: imagingStudy.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -158,8 +164,8 @@ groups:
     name: Flute Project Prostate Cancer Models
     description: Logical models representing the prostate cancer study variables
     resources:
-      - StructureDefinition/LM-StudyVariables
-      - StructureDefinition/LM-InclusionCriterias
+      - StructureDefinition/StudyVariables
+      - StructureDefinition/InclusionCriterias
 
   LogicalModelMapping:
     name: Flute Project Prostate Cancer study variables Model Mappings
