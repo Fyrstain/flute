@@ -18,6 +18,7 @@ Hyperlink 'StructureDefinition-PR-ProstateCancerFamilyHistory.html#FamilyMemberH
 Hyperlink 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.value' at 'div/table/tr/td/a' for 'Observation.value' does not resolve
 Hyperlink 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.status' at 'div/table/tr/td/a' for 'Observation.status' does not resolve
 Hyperlink 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.outcome.coding' at 'div/table/tr/td/a' for 'Procedure.outcome.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-Biopsy.html#Procedure.performedDateTime' at 'div/table/tr/td/a' for 'Procedure.performedDateTime' does not resolve
 Hyperlink 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.code.coding' at 'div/table/tr/td/a' for 'Procedure.code.coding' does not resolve
 Hyperlink 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.status' at 'div/table/tr/td/a' for 'Procedure.status' does not resolve
 Hyperlink 'StructureDefinition-PR-DigitalRectalExamination.html#Procedure.bodySite.coding' at 'div/table/tr/td/a' for 'Procedure.bodySite.coding' does not resolve
@@ -31,10 +32,11 @@ Hyperlink 'StructureDefinition-PR-PIRADSScore.html#Observation.status' at 'div/t
 Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.identifier.system' at 'div/table/tr/td/a' for 'ImagingStudy.identifier.system' does not resolve
 Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.identifier.value' at 'div/table/tr/td/a' for 'ImagingStudy.identifier.value' does not resolve
 Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.endpoint.display' at 'div/table/tr/td/a' for 'ImagingStudy.endpoint.display' does not resolve
-Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].uid' at 'div/table/tr/td/a' for 'ImagingStudy.series[0].uid' does not resolve
-Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].modality' at 'div/table/tr/td/a' for 'ImagingStudy.series[0].modality' does not resolve
-Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].instance[0].uid' at 'div/table/tr/td/a' for 'ImagingStudy.series[0].instance[0].uid' does not resolve
-Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].instance[0].sopClass' at 'div/table/tr/td/a' for 'ImagingStudy.series[0].instance[0].sopClass' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[+].uid' at 'div/table/tr/td/a' for 'ImagingStudy.series[+].uid' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].modality' at 'div/table/tr/td/a' for 'ImagingStudy.series[=].modality' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.instance' at 'div/table/tr/td/a' for 'ImagingStudy.instance' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].instance[+].uid' at 'div/table/tr/td/a' for 'ImagingStudy.series[=].instance[+].uid' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].instance[=].sopClass' at 'div/table/tr/td/a' for 'ImagingStudy.series[=].instance[=].sopClass' does not resolve
 Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.note.text' at 'div/table/tr/td/a' for 'ImagingStudy.note.text' does not resolve
 The link 'StructureDefinition-PR-Biopsy.html#Procedure.status' for "Procedure.status" cannot be resolved (valid targets: 337 targets)
 The link 'StructureDefinition-PR-Biopsy.html#Procedure.code.coding' for "Procedure.code.coding" cannot be resolved (valid targets: 337 targets)
@@ -56,10 +58,11 @@ The link 'StructureDefinition-PR-Biopsy.html#Procedure.performedDateTime' for "P
 The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.identifier.system' for "ImagingStudy.identifier.system" cannot be resolved (valid targets: 357 targets)
 The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.identifier.value' for "ImagingStudy.identifier.value" cannot be resolved (valid targets: 357 targets)
 The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.endpoint.display' for "ImagingStudy.endpoint.display" cannot be resolved (valid targets: 357 targets)
-The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].uid' for "ImagingStudy.series[0].uid" cannot be resolved (valid targets: 357 targets)
-The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].modality' for "ImagingStudy.series[0].modality" cannot be resolved (valid targets: 357 targets)
-The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].instance[0].uid' for "ImagingStudy.series[0].instance[0].uid" cannot be resolved (valid targets: 357 targets)
-The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[0].instance[0].sopClass' for "ImagingStudy.series[0].instance[0].sopClass" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[+].uid' for "ImagingStudy.series[+].uid" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].modality' for "ImagingStudy.series[=].modality" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.instance' for "ImagingStudy.instance" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].instance[+].uid' for "ImagingStudy.series[=].instance[+].uid" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].instance[=].sopClass' for "ImagingStudy.series[=].instance[=].sopClass" cannot be resolved (valid targets: 357 targets)
 The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.note.text' for "ImagingStudy.note.text" cannot be resolved (valid targets: 357 targets)
 
 # JSON resources that are in the inlcudes folder

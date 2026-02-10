@@ -2,13 +2,13 @@ Instance: Questionnaire-StudyVariable
 InstanceOf: sdc-questionnaire-extr-defn
 Usage: #definition
 * url = Canonical(Questionnaire-StudyVariable)
-* version = "2.0.0"
+* version = "2.1.0"
 * name = "StudyVariableExtraction"
-* title = "Study variable Extraction"
+* title = "Study variable Extraction 2.1.0"
 * status = #active
 * experimental = true
 * subjectType = #Patient
-* date = "2025-10-22"
+* date = "2026-02-10"
 * description = "Study variable extractable questionnaire"
 /* * jurisdiction = $m49.htm#001 "World" */
 
@@ -363,50 +363,50 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 
-// * item[=].item[+].linkId = "imaging-series-group"
-// * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series"
-// * item[=].item[=].text = "Imaging Study Series group"
-// * item[=].item[=].type = #group
-// * item[=].item[=].required = false
-// * item[=].item[=].repeats = true
+* item[=].item[+].linkId = "g-imaging-series"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series"
+* item[=].item[=].text = "Imaging Study Series group"
+* item[=].item[=].type = #group
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
 
-* item[=].item[+].linkId = "imagingstudy-series-uid"
-* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[0].uid"
-* item[=].item[=].text = "Study Series UID"
-* item[=].item[=].type = #string
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
+* item[=].item[=].item[+].linkId = "imagingstudy-series-uid"
+* item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[+].uid"
+* item[=].item[=].item[=].text = "Study Series UID"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = false
 
-* item[=].item[+].linkId = "imagingstudy-series-modality"
-* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[0].modality"
-* item[=].item[=].text = "Study Series Modality"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-* item[=].item[=].answerValueSet = "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
+* item[=].item[=].item[+].linkId = "imagingstudy-series-modality"
+* item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].modality"
+* item[=].item[=].item[=].text = "Study Series Modality"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].answerValueSet = "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
 
 
-// * item[=].item[=].item[+].linkId = "imaging-instance-group"
-// * item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.instance"
-// * item[=].item[=].item[=].text = "Imaging Study Instance group"
-// * item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].required = false
-// * item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[+].linkId = "g-imaging-instance"
+* item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.instance"
+* item[=].item[=].item[=].text = "Imaging Study Instance group"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
 
-* item[=].item[+].linkId = "imagingstudy-instance-uid"
-* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[0].instance[0].uid"
-* item[=].item[=].text = "Study instance UID"
-* item[=].item[=].type = #string
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-uid"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[+].uid"
+* item[=].item[=].item[=].item[=].text = "Study instance UID"
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].repeats = false
 
-* item[=].item[+].linkId = "imagingstudy-instance-class"
-* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[0].instance[0].sopClass"
-* item[=].item[=].text = "Study instance SOP Class"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].repeats = false
-* item[=].item[=].answerValueSet = Canonical(VS_SOPClass)
+* item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-class"
+* item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[=].sopClass"
+* item[=].item[=].item[=].item[=].text = "Study instance SOP Class"
+* item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].item[=].answerValueSet = Canonical(VS_SOPClass)
 
 * item[=].item[+].linkId = "imagingstudy-note"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.note.text"
