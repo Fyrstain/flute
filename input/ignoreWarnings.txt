@@ -14,6 +14,10 @@ A definition could not be found for Canonical URL 'http://dicom.nema.org/medical
 # Hyperlink not resolve in the questionnaire definition but path is correct
 Hyperlink 'StructureDefinition-PR-Biopsy.html#Procedure.status' at 'div/table/tr/td/a' for 'Procedure.status' does not resolve
 Hyperlink 'StructureDefinition-PR-Biopsy.html#Procedure.code.coding' at 'div/table/tr/td/a' for 'Procedure.code.coding' does not resolve
+Hyperlink 'StructureDefinition-PR-Biopsy.html#Procedure.performedAge.system' at 'div/table/tr/td/a' for 'Procedure.performedAge.system' does not resolve
+Hyperlink 'StructureDefinition-PR-Biopsy.html#Procedure.performedAge.code' at 'div/table/tr/td/a' for 'Procedure.performedAge.code' does not resolve
+Hyperlink 'StructureDefinition-PR-Biopsy.html#Procedure.performedAge.value' at 'div/table/tr/td/a' for 'Procedure.performedAge.value' does not resolve
+Hyperlink 'StructureDefinition-PR-Biopsy.html#Procedure.outcome.coding' at 'div/table/tr/td/a' for 'Procedure.outcome.coding' does not resolve
 Hyperlink 'StructureDefinition-PR-ProstateCancerFamilyHistory.html#FamilyMemberHistory.status' at 'div/table/tr/td/a' for 'FamilyMemberHistory.status' does not resolve
 Hyperlink 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.value' at 'div/table/tr/td/a' for 'Observation.value' does not resolve
 Hyperlink 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.status' at 'div/table/tr/td/a' for 'Observation.status' does not resolve
@@ -40,6 +44,10 @@ Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=]
 Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.note.text' at 'div/table/tr/td/a' for 'ImagingStudy.note.text' does not resolve
 The link 'StructureDefinition-PR-Biopsy.html#Procedure.status' for "Procedure.status" cannot be resolved (valid targets: 337 targets)
 The link 'StructureDefinition-PR-Biopsy.html#Procedure.code.coding' for "Procedure.code.coding" cannot be resolved (valid targets: 337 targets)
+The link 'StructureDefinition-PR-Biopsy.html#Procedure.performedAge.system' for "Procedure.performedAge.system" cannot be resolved (valid targets: 337 targets)
+The link 'StructureDefinition-PR-Biopsy.html#Procedure.performedAge.code' for "Procedure.performedAge.code" cannot be resolved (valid targets: 337 targets)
+The link 'StructureDefinition-PR-Biopsy.html#Procedure.performedAge.value' for "Procedure.performedAge.value" cannot be resolved (valid targets: 337 targets)
+The link 'StructureDefinition-PR-Biopsy.html#Procedure.outcome.coding' for "Procedure.outcome.coding" cannot be resolved (valid targets: 337 targets)
 The link 'StructureDefinition-PR-ProstateCancerFamilyHistory.html#FamilyMemberHistory.status' for "FamilyMemberHistory.status" cannot be resolved (valid targets: 267 targets)
 The link 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.value' for "Observation.value" cannot be resolved (valid targets: 368 targets)
 The link 'StructureDefinition-PR-ProstateSpecificAntigen.html#Observation.status' for "Observation.status" cannot be resolved (valid targets: 368 targets)
