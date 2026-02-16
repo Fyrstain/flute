@@ -10,7 +10,6 @@ Usage: #definition
 * subjectType = #Patient
 * date = "2026-02-10"
 * description = "Study variable extractable questionnaire operational"
-/* * jurisdiction = $m49.htm#001 "World" */
 
 * item[+].linkId = "g-proc"
 * item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-Biopsy#Procedure"
@@ -35,7 +34,6 @@ Usage: #definition
 * item[=].item[=].readOnly = true
 * item[=].item[=].code = $sct#86273004
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $event-status#completed
 * item[=].item[=].answerOption.valueCoding = $event-status#completed
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -76,7 +74,6 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $sct#86273004 "Biopsy"
 * item[=].item[=].answerOption.valueCoding = $sct#86273004 "Biopsy"
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -87,7 +84,6 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-//* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostate"
 * item[=].item[=].answerOption.valueCoding = $sct#41216001 "Prostatic structure (body structure)"
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -114,7 +110,6 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].answerValueSet = Canonical(VS-PCa)
-// * item[=].item[=].code = $sct#399068003
 
 * item[=].item[+].linkId = "family-status"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/PR-ProstateCancerFamilyHistory#FamilyMemberHistory.status"
@@ -122,9 +117,7 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-// * item[=].item[=].code = $sct#399068003
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/history-status#completed
 * item[=].item[=].answerOption.valueCoding = $history-status#completed
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -134,9 +127,7 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
-// * item[=].item[=].code = $sct#399068003
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $v3-RoleCode#FAMMEMB
 * item[=].item[=].answerOption.valueCoding = $v3-RoleCode#FAMMEMB
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -161,7 +152,6 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $loinc#2857-1 "Prostate specific Ag [Mass/volume] in Serum or Plasma"
 * item[=].item[=].answerOption.valueCoding = $loinc#2857-1 "Prostate specific Ag [Mass/volume] in Serum or Plasma"
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -173,7 +163,6 @@ Usage: #definition
 * item[=].item[=].repeats = false
 * item[=].item[=].code = $loinc#2857-1
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/observation-status#final
 * item[=].item[=].answerOption.valueCoding = http://hl7.org/fhir/observation-status#final
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -199,7 +188,6 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $sct#410006001 "DRE - Digital rectal examination"
 * item[=].item[=].answerOption.valueCoding = $sct#410006001 "DRE - Digital rectal examination"
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -211,7 +199,6 @@ Usage: #definition
 * item[=].item[=].repeats = false
 * item[=].item[=].code = $sct#410006001
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $event-status#completed
 * item[=].item[=].answerOption.valueCoding = $event-status#completed
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -222,7 +209,6 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostate"
 * item[=].item[=].answerOption.valueCoding = $sct#41216001 "Prostate"
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -247,7 +233,6 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $sct#1297142007 "Volume of prostate"
 * item[=].item[=].answerOption.valueCoding = $sct#1297142007 "Volume of prostate"
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -260,7 +245,6 @@ Usage: #definition
 * item[=].item[=].code = $sct#1297142007
 * item[=].item[=].code = $sct#41216001
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/observation-status#final
 * item[=].item[=].answerOption.valueCoding = http://hl7.org/fhir/observation-status#final
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -271,7 +255,6 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $sct#41216001 "Prostate"
 * item[=].item[=].answerOption.valueCoding = $sct#41216001 "Prostate"
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -302,7 +285,6 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = $sct#719178004 "Multiparametric magnetic resonance imaging of prostate"
 * item[=].item[=].answerOption.valueCoding = $sct#719178004 "Multiparametric magnetic resonance imaging of prostate"
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -314,7 +296,6 @@ Usage: #definition
 * item[=].item[=].repeats = false
 * item[=].item[=].code = $sct#719178004
 * item[=].item[=].readOnly = true
-//* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/observation-status#final
 * item[=].item[=].answerOption.valueCoding = http://hl7.org/fhir/observation-status#final
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -346,8 +327,6 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].repeats = false
 * item[=].item[=].readOnly = true
-//* item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/imagingstudy-status"
-//* item[=].item[=].initial.valueCoding = http://hl7.org/fhir/imagingstudy-status#available
 * item[=].item[=].answerOption.valueCoding = http://hl7.org/fhir/imagingstudy-status#available
 * item[=].item[=].answerOption.initialSelected = true
 
@@ -386,28 +365,6 @@ Usage: #definition
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = false
 * item[=].item[=].item[=].answerValueSet = "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
-
-// * item[=].item[=].item[+].linkId = "g-imaging-instance"
-// * item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.instance"
-// * item[=].item[=].item[=].text = "Imaging Study Instance group"
-// * item[=].item[=].item[=].type = #group
-// * item[=].item[=].item[=].required = false
-// * item[=].item[=].item[=].repeats = true
-
-// * item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-uid"
-// * item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[+].uid"
-// * item[=].item[=].item[=].item[=].text = "Study instance UID"
-// * item[=].item[=].item[=].item[=].type = #string
-// * item[=].item[=].item[=].item[=].required = true
-// * item[=].item[=].item[=].item[=].repeats = false
-
-// * item[=].item[=].item[=].item[+].linkId = "imagingstudy-instance-class"
-// * item[=].item[=].item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.series[=].instance[=].sopClass"
-// * item[=].item[=].item[=].item[=].text = "Study instance SOP Class"
-// * item[=].item[=].item[=].item[=].type = #choice
-// * item[=].item[=].item[=].item[=].required = true
-// * item[=].item[=].item[=].item[=].repeats = false
-// * item[=].item[=].item[=].item[=].answerValueSet = Canonical(VS_SOPClass)
 
 * item[=].item[+].linkId = "imagingstudy-note"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.note.text"
