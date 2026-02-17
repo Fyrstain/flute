@@ -330,6 +330,24 @@ Usage: #definition
 * item[=].item[=].answerOption.valueCoding = http://hl7.org/fhir/imagingstudy-status#available
 * item[=].item[=].answerOption.initialSelected = true
 
+* item[=].item[+].linkId = "imagingstudy-modality-system"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.modality.system"
+* item[=].item[=].text = "Study Modality System"
+* item[=].item[=].type = #url
+* item[=].item[=].required = false
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueUri = "http://dicom.nema.org/resources/ontology/DCM"
+
+* item[=].item[+].linkId = "imagingstudy-modality-code"
+* item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.modality.code"
+* item[=].item[=].text = "Study Modality Code"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+* item[=].item[=].repeats = false
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueString = "MR"
+
 * item[=].item[+].linkId = "imagingstudy-started"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.started"
 * item[=].item[=].text = "Study Started DateTime"
@@ -364,7 +382,7 @@ Usage: #definition
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].repeats = false
-* item[=].item[=].item[=].answerValueSet = "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
+* item[=].item[=].item[=].answerValueSet = Canonical(VS-AcquisitionSeries)
 
 * item[=].item[+].linkId = "imagingstudy-note"
 * item[=].item[=].definition = "http://hl7.eu/fhir/ig/flute/StructureDefinition/imagingStudy-eu-flute#ImagingStudy.note.text"

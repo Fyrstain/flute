@@ -42,6 +42,8 @@ Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.instance'
 Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].instance[+].uid' at 'div/table/tr/td/a' for 'ImagingStudy.series[=].instance[+].uid' does not resolve
 Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].instance[=].sopClass' at 'div/table/tr/td/a' for 'ImagingStudy.series[=].instance[=].sopClass' does not resolve
 Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.note.text' at 'div/table/tr/td/a' for 'ImagingStudy.note.text' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.modality.system' at 'div/table/tr/td/a' for 'ImagingStudy.modality.system' does not resolve
+Hyperlink 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.modality.code' at 'div/table/tr/td/a' for 'ImagingStudy.modality.code' does not resolve
 The link 'StructureDefinition-PR-Biopsy.html#Procedure.status' for "Procedure.status" cannot be resolved (valid targets: 337 targets)
 The link 'StructureDefinition-PR-Biopsy.html#Procedure.code.coding' for "Procedure.code.coding" cannot be resolved (valid targets: 337 targets)
 The link 'StructureDefinition-PR-Biopsy.html#Procedure.performedAge.system' for "Procedure.performedAge.system" cannot be resolved (valid targets: 337 targets)
@@ -72,6 +74,8 @@ The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.instance' 
 The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].instance[+].uid' for "ImagingStudy.series[=].instance[+].uid" cannot be resolved (valid targets: 357 targets)
 The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.series[=].instance[=].sopClass' for "ImagingStudy.series[=].instance[=].sopClass" cannot be resolved (valid targets: 357 targets)
 The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.note.text' for "ImagingStudy.note.text" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.modality.system' for "ImagingStudy.modality.system" cannot be resolved (valid targets: 357 targets)
+The link 'StructureDefinition-imagingStudy-eu-flute.html#ImagingStudy.modality.code' for "ImagingStudy.modality.code" cannot be resolved (valid targets: 357 targets)
 
 # JSON resources that are in the inlcudes folder
 The link 'DocumentReference/EXP-S1-IncludedPatient' for "DocumentReference/EXP-S1-IncludedPatient" cannot be resolved
