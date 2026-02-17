@@ -146,18 +146,30 @@ Description: "Values for the acquisition series of an imaging study."
 * ^expansion.contains[=].code = #113043
 * ^expansion.contains[=].display = "Diffusion weighted"
 * ^expansion.contains[+].system = "http://dicom.nema.org/resources/ontology/DCM"
-* ^expansion.contains[=].code = #SEG
-* ^expansion.contains[=].display = "Segmentation"
+* ^expansion.contains[=].code = #111357
+* ^expansion.contains[=].display = "Lesion boundary"
 * ^expansion.contains[+].system = "http://dicom.nema.org/resources/ontology/DCM"
 * ^expansion.contains[=].code = #113076
 * ^expansion.contains[=].display = "Segmentation"
+* ^expansion.contains[+].system = "http://dicom.nema.org/resources/ontology/DCM"
+* ^expansion.contains[=].code = #126312
+* ^expansion.contains[=].display = "Ktrans"
+* ^expansion.contains[+].system = "http://dicom.nema.org/resources/ontology/DCM"
+* ^expansion.contains[=].code = #126313
+* ^expansion.contains[=].display = "kep"
+* ^expansion.contains[+].system = "http://dicom.nema.org/resources/ontology/DCM"
+* ^expansion.contains[=].code = #126314
+* ^expansion.contains[=].display = "ve"
 
 * include codes from valueset http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html
 * include codes from valueset https://hl7.lt/fhir/prostate/ValueSet/sequence-type-prostate-lt
 
-* http://dicom.nema.org/resources/ontology/DCM#SEG "Segmentation"
+* http://dicom.nema.org/resources/ontology/DCM#111357 "Lesion boundary"
 * http://dicom.nema.org/resources/ontology/DCM#113076 "Segmentation"
 * http://dicom.nema.org/resources/ontology/DCM#130561 "PI-RADS T2WI Lesion Assessment"
 * http://dicom.nema.org/resources/ontology/DCM#130562 "PI-RADS DWI Lesion Assessment"
 * http://dicom.nema.org/resources/ontology/DCM#130563 "PI-RADS DCE Lesion Assessment"
 * http://dicom.nema.org/resources/ontology/DCM#113041 "Apparent Diffusion Coefficient"
+* http://dicom.nema.org/resources/ontology/DCM#126312 "Ktrans"
+* http://dicom.nema.org/resources/ontology/DCM#126313 "kep"
+* http://dicom.nema.org/resources/ontology/DCM#126314 "ve"
